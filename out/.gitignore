@@ -1,0 +1,4 @@
+# this directory is populated with files by running the demo examples
+*.csv
+*.json
+*.txt

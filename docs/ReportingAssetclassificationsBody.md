@@ -1,0 +1,12 @@
+# ReportingAssetclassificationsBody
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**firm_id** | **int** | ID of the owning firm | [optional] 
+**security_id** | **int** | ID of the security being classified | [optional] 
+**created_by_user_id** | **int** | ID of the user that created the classification | [optional] 
+**class_tag_id** | **int** | ID of the class tag for the classification | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
