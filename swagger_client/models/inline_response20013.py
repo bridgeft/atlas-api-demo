@@ -28,66 +28,222 @@ class InlineResponse20013(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'n': 'int',
-        'ids': 'list[int]'
+        'object': 'str',
+        'has_next': 'bool',
+        'has_previous': 'bool',
+        'current_page': 'int',
+        'total_pages': 'int',
+        'page_size_limit': 'int',
+        'total_items': 'int',
+        'data': 'list[FeeUploads]'
     }
 
     attribute_map = {
-        'n': 'n',
-        'ids': 'ids'
+        'object': 'object',
+        'has_next': 'has_next',
+        'has_previous': 'has_previous',
+        'current_page': 'current_page',
+        'total_pages': 'total_pages',
+        'page_size_limit': 'page_size_limit',
+        'total_items': 'total_items',
+        'data': 'data'
     }
 
-    def __init__(self, n=None, ids=None):  # noqa: E501
+    def __init__(self, object=None, has_next=None, has_previous=None, current_page=None, total_pages=None, page_size_limit=None, total_items=None, data=None):  # noqa: E501
         """InlineResponse20013 - a model defined in Swagger"""  # noqa: E501
-        self._n = None
-        self._ids = None
+        self._object = None
+        self._has_next = None
+        self._has_previous = None
+        self._current_page = None
+        self._total_pages = None
+        self._page_size_limit = None
+        self._total_items = None
+        self._data = None
         self.discriminator = None
-        if n is not None:
-            self.n = n
-        if ids is not None:
-            self.ids = ids
+        if object is not None:
+            self.object = object
+        if has_next is not None:
+            self.has_next = has_next
+        if has_previous is not None:
+            self.has_previous = has_previous
+        if current_page is not None:
+            self.current_page = current_page
+        if total_pages is not None:
+            self.total_pages = total_pages
+        if page_size_limit is not None:
+            self.page_size_limit = page_size_limit
+        if total_items is not None:
+            self.total_items = total_items
+        if data is not None:
+            self.data = data
 
     @property
-    def n(self):
-        """Gets the n of this InlineResponse20013.  # noqa: E501
+    def object(self):
+        """Gets the object of this InlineResponse20013.  # noqa: E501
 
 
-        :return: The n of this InlineResponse20013.  # noqa: E501
+        :return: The object of this InlineResponse20013.  # noqa: E501
+        :rtype: str
+        """
+        return self._object
+
+    @object.setter
+    def object(self, object):
+        """Sets the object of this InlineResponse20013.
+
+
+        :param object: The object of this InlineResponse20013.  # noqa: E501
+        :type: str
+        """
+
+        self._object = object
+
+    @property
+    def has_next(self):
+        """Gets the has_next of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The has_next of this InlineResponse20013.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_next
+
+    @has_next.setter
+    def has_next(self, has_next):
+        """Sets the has_next of this InlineResponse20013.
+
+
+        :param has_next: The has_next of this InlineResponse20013.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_next = has_next
+
+    @property
+    def has_previous(self):
+        """Gets the has_previous of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The has_previous of this InlineResponse20013.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_previous
+
+    @has_previous.setter
+    def has_previous(self, has_previous):
+        """Sets the has_previous of this InlineResponse20013.
+
+
+        :param has_previous: The has_previous of this InlineResponse20013.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_previous = has_previous
+
+    @property
+    def current_page(self):
+        """Gets the current_page of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The current_page of this InlineResponse20013.  # noqa: E501
         :rtype: int
         """
-        return self._n
+        return self._current_page
 
-    @n.setter
-    def n(self, n):
-        """Sets the n of this InlineResponse20013.
+    @current_page.setter
+    def current_page(self, current_page):
+        """Sets the current_page of this InlineResponse20013.
 
 
-        :param n: The n of this InlineResponse20013.  # noqa: E501
+        :param current_page: The current_page of this InlineResponse20013.  # noqa: E501
         :type: int
         """
 
-        self._n = n
+        self._current_page = current_page
 
     @property
-    def ids(self):
-        """Gets the ids of this InlineResponse20013.  # noqa: E501
+    def total_pages(self):
+        """Gets the total_pages of this InlineResponse20013.  # noqa: E501
 
 
-        :return: The ids of this InlineResponse20013.  # noqa: E501
-        :rtype: list[int]
+        :return: The total_pages of this InlineResponse20013.  # noqa: E501
+        :rtype: int
         """
-        return self._ids
+        return self._total_pages
 
-    @ids.setter
-    def ids(self, ids):
-        """Sets the ids of this InlineResponse20013.
+    @total_pages.setter
+    def total_pages(self, total_pages):
+        """Sets the total_pages of this InlineResponse20013.
 
 
-        :param ids: The ids of this InlineResponse20013.  # noqa: E501
-        :type: list[int]
+        :param total_pages: The total_pages of this InlineResponse20013.  # noqa: E501
+        :type: int
         """
 
-        self._ids = ids
+        self._total_pages = total_pages
+
+    @property
+    def page_size_limit(self):
+        """Gets the page_size_limit of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The page_size_limit of this InlineResponse20013.  # noqa: E501
+        :rtype: int
+        """
+        return self._page_size_limit
+
+    @page_size_limit.setter
+    def page_size_limit(self, page_size_limit):
+        """Sets the page_size_limit of this InlineResponse20013.
+
+
+        :param page_size_limit: The page_size_limit of this InlineResponse20013.  # noqa: E501
+        :type: int
+        """
+
+        self._page_size_limit = page_size_limit
+
+    @property
+    def total_items(self):
+        """Gets the total_items of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The total_items of this InlineResponse20013.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_items
+
+    @total_items.setter
+    def total_items(self, total_items):
+        """Sets the total_items of this InlineResponse20013.
+
+
+        :param total_items: The total_items of this InlineResponse20013.  # noqa: E501
+        :type: int
+        """
+
+        self._total_items = total_items
+
+    @property
+    def data(self):
+        """Gets the data of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The data of this InlineResponse20013.  # noqa: E501
+        :rtype: list[FeeUploads]
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this InlineResponse20013.
+
+
+        :param data: The data of this InlineResponse20013.  # noqa: E501
+        :type: list[FeeUploads]
+        """
+
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

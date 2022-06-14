@@ -42,10 +42,10 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ReportingBenchmarksBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param BenchmarkCreate body: (required)
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,15 +66,15 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ReportingBenchmarksBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param BenchmarkCreate body: (required)
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -99,10 +99,10 @@ class BenchmarksApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -131,7 +131,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -149,10 +149,10 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[Paths1reporting1benchmarkspostrequestBodycontentapplication1jsonschema] body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse20042
+        :param list[BenchmarkCreate] body: (required)
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -173,15 +173,15 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[Paths1reporting1benchmarkspostrequestBodycontentapplication1jsonschema] body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse20042
+        :param list[BenchmarkCreate] body: (required)
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -206,10 +206,10 @@ class BenchmarksApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -238,7 +238,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20042',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -257,9 +257,9 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: None
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: Delete
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -281,14 +281,14 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: None
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: Delete
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -315,10 +315,10 @@ class BenchmarksApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -326,6 +326,10 @@ class BenchmarksApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = []  # noqa: E501
 
@@ -337,7 +341,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='Delete',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -356,9 +360,9 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param object body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: None
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: DeleteMany
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -380,14 +384,14 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param object body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: None
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: DeleteMany
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -412,10 +416,10 @@ class BenchmarksApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -425,6 +429,10 @@ class BenchmarksApi(object):
         body_params = None
         if 'body' in params:
             body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
@@ -440,7 +448,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='DeleteMany',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -458,10 +466,10 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param BenchmarksFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param BenchmarkFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -482,15 +490,15 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param BenchmarksFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param BenchmarkFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -511,10 +519,10 @@ class BenchmarksApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -543,7 +551,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -562,9 +570,9 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -586,14 +594,14 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -620,10 +628,10 @@ class BenchmarksApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -646,7 +654,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -664,9 +672,9 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse20042
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -687,14 +695,14 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse20042
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -715,10 +723,10 @@ class BenchmarksApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -741,7 +749,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20042',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -760,9 +768,9 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -784,14 +792,14 @@ class BenchmarksApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse2006
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -818,10 +826,10 @@ class BenchmarksApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -844,7 +852,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -862,9 +870,9 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse20042
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -885,14 +893,14 @@ class BenchmarksApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse20042
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -913,10 +921,10 @@ class BenchmarksApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -939,7 +947,7 @@ class BenchmarksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20042',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

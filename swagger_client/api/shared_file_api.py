@@ -42,10 +42,10 @@ class SharedFileApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FilesharingFilesBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200118
+        :param FileSharingCreate body: (required)
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,15 +66,15 @@ class SharedFileApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FilesharingFilesBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200118
+        :param FileSharingCreate body: (required)
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -99,10 +99,10 @@ class SharedFileApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -131,7 +131,7 @@ class SharedFileApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200118',  # noqa: E501
+            response_type='InlineResponse20085',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -150,9 +150,9 @@ class SharedFileApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: None
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: Delete
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -174,14 +174,14 @@ class SharedFileApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: None
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: Delete
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -208,10 +208,10 @@ class SharedFileApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -219,6 +219,10 @@ class SharedFileApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = []  # noqa: E501
 
@@ -230,7 +234,7 @@ class SharedFileApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='Delete',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -248,10 +252,10 @@ class SharedFileApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FilesFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200120
+        :param FileSharingFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -272,15 +276,15 @@ class SharedFileApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FilesFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200120
+        :param FileSharingFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -301,10 +305,10 @@ class SharedFileApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -333,7 +337,7 @@ class SharedFileApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200120',  # noqa: E501
+            response_type='InlineResponse20084',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -352,9 +356,9 @@ class SharedFileApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200119
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -376,14 +380,14 @@ class SharedFileApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200119
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -410,10 +414,10 @@ class SharedFileApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -436,7 +440,7 @@ class SharedFileApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200119',  # noqa: E501
+            response_type='InlineResponse20085',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -456,8 +460,8 @@ class SharedFileApi(object):
         :param async_req bool
         :param DownloadIdBody2 body: (required)
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -481,14 +485,14 @@ class SharedFileApi(object):
         :param async_req bool
         :param DownloadIdBody2 body: (required)
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'id', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -519,10 +523,10 @@ class SharedFileApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -569,9 +573,9 @@ class SharedFileApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200117
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -592,14 +596,14 @@ class SharedFileApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200117
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -620,10 +624,10 @@ class SharedFileApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -646,7 +650,7 @@ class SharedFileApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200117',  # noqa: E501
+            response_type='InlineResponse20084',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -665,9 +669,9 @@ class SharedFileApi(object):
 
         :param async_req bool
         :param FilesUploadBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200120
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -689,14 +693,14 @@ class SharedFileApi(object):
 
         :param async_req bool
         :param FilesUploadBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200120
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -721,10 +725,10 @@ class SharedFileApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -753,7 +757,7 @@ class SharedFileApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200120',  # noqa: E501
+            response_type='InlineResponse20084',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

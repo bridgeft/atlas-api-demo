@@ -35,7 +35,7 @@ class InlineResponse20044(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1reporting1targetAllocationsgetresponses200contentapplication1jsonschemapropertiesdataitems]'
+        'data': 'list[BuySells]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20044(object):
 
 
         :return: The data of this InlineResponse20044.  # noqa: E501
-        :rtype: list[Paths1reporting1targetAllocationsgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :rtype: list[BuySells]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20044(object):
 
 
         :param data: The data of this InlineResponse20044.  # noqa: E501
-        :type: list[Paths1reporting1targetAllocationsgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :type: list[BuySells]
         """
 
         self._data = data

@@ -42,10 +42,10 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SecuritiesFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200112
+        :param SecurityFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,15 +66,15 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SecuritiesFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200112
+        :param SecurityFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -95,10 +95,10 @@ class SecuritiesApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -127,7 +127,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200112',  # noqa: E501
+            response_type='InlineResponse20080',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -145,9 +145,9 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200110
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -168,14 +168,14 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200110
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -196,10 +196,10 @@ class SecuritiesApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -222,7 +222,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200110',  # noqa: E501
+            response_type='InlineResponse20080',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -241,9 +241,9 @@ class SecuritiesApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200111
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20081
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -265,14 +265,14 @@ class SecuritiesApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200111
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20081
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -299,10 +299,10 @@ class SecuritiesApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -325,7 +325,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200111',  # noqa: E501
+            response_type='InlineResponse20081',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -343,8 +343,8 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -366,14 +366,14 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -394,10 +394,10 @@ class SecuritiesApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -439,9 +439,9 @@ class SecuritiesApi(object):
 
         :param async_req bool
         :param SecuritiesFetchBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200112
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -463,14 +463,14 @@ class SecuritiesApi(object):
 
         :param async_req bool
         :param SecuritiesFetchBody body: (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200112
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -495,10 +495,10 @@ class SecuritiesApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -527,7 +527,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200112',  # noqa: E501
+            response_type='InlineResponse20080',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -545,8 +545,8 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
         :return: list[int]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -568,14 +568,14 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
         :return: list[int]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -596,10 +596,10 @@ class SecuritiesApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -641,9 +641,9 @@ class SecuritiesApi(object):
 
         :param async_req bool
         :param str q: The symbol or description of a Security to filter by (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200111
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20081
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -665,14 +665,14 @@ class SecuritiesApi(object):
 
         :param async_req bool
         :param str q: The symbol or description of a Security to filter by (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200111
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20081
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['q', 'limit', 'page']  # noqa: E501
+        all_params = ['q', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -699,10 +699,10 @@ class SecuritiesApi(object):
             path_params['q'] = params['q']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -725,7 +725,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200111',  # noqa: E501
+            response_type='InlineResponse20081',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -743,9 +743,9 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200113
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20081
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -766,14 +766,14 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200113
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20081
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -794,10 +794,10 @@ class SecuritiesApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -820,7 +820,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200113',  # noqa: E501
+            response_type='InlineResponse20081',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

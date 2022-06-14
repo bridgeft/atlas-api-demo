@@ -546,7 +546,7 @@ class Account(object):
         :param status: The status of this Account.  # noqa: E501
         :type: str
         """
-        allowed_values = ["funded", "papered", "closed", "stale"]  # noqa: E501
+        allowed_values = ["funded", "papered", "closed", "stale", ""]  # noqa: E501
         if status not in allowed_values:
             raise ValueError(
                 "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
@@ -667,7 +667,7 @@ class Account(object):
         :param custodian: The custodian of this Account.  # noqa: E501
         :type: str
         """
-        allowed_values = ["TDA", "SWB", "NFS", "PER", "DST", "MLT", "RJA", "HDG"]  # noqa: E501
+        allowed_values = ["TDA", "SWB", "NFS", "PER", "DST", "MLT", "RJA", "HDG", ""]  # noqa: E501
         if custodian not in allowed_values:
             raise ValueError(
                 "Invalid value for `custodian` ({0}), must be one of {1}"  # noqa: E501
@@ -926,7 +926,7 @@ class Account(object):
         :param payment_source: The payment_source of this Account.  # noqa: E501
         :type: str
         """
-        allowed_values = ["C", "D"]  # noqa: E501
+        allowed_values = ["C", "D", ""]  # noqa: E501
         if payment_source not in allowed_values:
             raise ValueError(
                 "Invalid value for `payment_source` ({0}), must be one of {1}"  # noqa: E501

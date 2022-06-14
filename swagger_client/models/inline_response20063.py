@@ -35,7 +35,7 @@ class InlineResponse20063(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1data1luca1gainLoss1filterpostresponses200contentapplication1jsonschemapropertiesdataitems]'
+        'data': 'list[HouseholdBalance]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20063(object):
 
 
         :return: The data of this InlineResponse20063.  # noqa: E501
-        :rtype: list[Paths1data1luca1gainLoss1filterpostresponses200contentapplication1jsonschemapropertiesdataitems]
+        :rtype: list[HouseholdBalance]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20063(object):
 
 
         :param data: The data of this InlineResponse20063.  # noqa: E501
-        :type: list[Paths1data1luca1gainLoss1filterpostresponses200contentapplication1jsonschemapropertiesdataitems]
+        :type: list[HouseholdBalance]
         """
 
         self._data = data

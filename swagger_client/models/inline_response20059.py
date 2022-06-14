@@ -35,7 +35,7 @@ class InlineResponse20059(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[list[Paths1data1luca1incomeExpense17Bid7Dgetresponses200contentapplication1jsonschemapropertiesdataitems]]'
+        'data': 'list[Position]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20059(object):
 
 
         :return: The data of this InlineResponse20059.  # noqa: E501
-        :rtype: list[list[Paths1data1luca1incomeExpense17Bid7Dgetresponses200contentapplication1jsonschemapropertiesdataitems]]
+        :rtype: list[Position]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20059(object):
 
 
         :param data: The data of this InlineResponse20059.  # noqa: E501
-        :type: list[list[Paths1data1luca1incomeExpense17Bid7Dgetresponses200contentapplication1jsonschemapropertiesdataitems]]
+        :type: list[Position]
         """
 
         self._data = data

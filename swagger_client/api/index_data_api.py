@@ -42,10 +42,10 @@ class IndexDataApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param IndexesFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200116
+        :param IndexFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20082
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,15 +66,15 @@ class IndexDataApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param IndexesFilterBody body:
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200116
+        :param IndexFilter body:
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20082
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'limit', 'page']  # noqa: E501
+        all_params = ['body', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -95,10 +95,10 @@ class IndexDataApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -127,7 +127,7 @@ class IndexDataApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200116',  # noqa: E501
+            response_type='InlineResponse20082',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -146,9 +146,9 @@ class IndexDataApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200115
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20083
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -170,14 +170,14 @@ class IndexDataApi(object):
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200115
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20083
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'limit', 'page']  # noqa: E501
+        all_params = ['id', 'pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -204,10 +204,10 @@ class IndexDataApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -230,7 +230,7 @@ class IndexDataApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200115',  # noqa: E501
+            response_type='InlineResponse20083',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -248,9 +248,9 @@ class IndexDataApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200114
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20082
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -271,14 +271,14 @@ class IndexDataApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int limit: Number of items to return per page
-        :param int page: Current page number
-        :return: InlineResponse200114
+        :param int pager_limit: Number of items to return per page
+        :param int pager_page: Current page number
+        :return: InlineResponse20082
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'page']  # noqa: E501
+        all_params = ['pager_limit', 'pager_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -299,10 +299,10 @@ class IndexDataApi(object):
         path_params = {}
 
         query_params = []
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
+        if 'pager_limit' in params:
+            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
+        if 'pager_page' in params:
+            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -325,7 +325,7 @@ class IndexDataApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200114',  # noqa: E501
+            response_type='InlineResponse20082',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
