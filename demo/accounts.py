@@ -1,11 +1,11 @@
 from __future__ import print_function
 import swagger_client
 from swagger_client.rest import ApiException
-from demo import api_client
+from demo import authed_client
 import csv
 
 # declare an instance of the api for interacting with the accounts resource
-api = swagger_client.AccountsApi(api_client())
+api = swagger_client.AccountsApi(authed_client())
 
 # fields that we care about for this demonstration
 fields = [
