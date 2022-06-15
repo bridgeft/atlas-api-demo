@@ -33,9 +33,9 @@ def list_api_keys():
 
     # use the id token as a bearer token to view api keys
     api = swagger_client.APIKeysApi(token_authed_client(id_token))
-    resp = api.get_apis()
+    resp = api.get_api_keys()
     for obj in resp.data:
-        print(f'key: {obj.key}')
+        print(f'key: {obj["key"]}')
 
 
 
