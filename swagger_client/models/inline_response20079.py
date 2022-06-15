@@ -35,7 +35,7 @@ class InlineResponse20079(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[list[Paths1data1luca1accountBalances1currentgetresponses200contentapplication1jsonschemapropertiesdataitems]]'
+        'data': 'list[HeldawayHoldings]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20079(object):
 
 
         :return: The data of this InlineResponse20079.  # noqa: E501
-        :rtype: list[list[Paths1data1luca1accountBalances1currentgetresponses200contentapplication1jsonschemapropertiesdataitems]]
+        :rtype: list[HeldawayHoldings]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20079(object):
 
 
         :param data: The data of this InlineResponse20079.  # noqa: E501
-        :type: list[list[Paths1data1luca1accountBalances1currentgetresponses200contentapplication1jsonschemapropertiesdataitems]]
+        :type: list[HeldawayHoldings]
         """
 
         self._data = data

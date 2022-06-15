@@ -35,7 +35,7 @@ class InlineResponse20024(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[list[Paths1billing1invoices17Bid7Dgetresponses200contentapplication1jsonschemapropertiesdataitems]]'
+        'data': 'list[Minimums]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20024(object):
 
 
         :return: The data of this InlineResponse20024.  # noqa: E501
-        :rtype: list[list[Paths1billing1invoices17Bid7Dgetresponses200contentapplication1jsonschemapropertiesdataitems]]
+        :rtype: list[Minimums]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20024(object):
 
 
         :param data: The data of this InlineResponse20024.  # noqa: E501
-        :type: list[list[Paths1billing1invoices17Bid7Dgetresponses200contentapplication1jsonschemapropertiesdataitems]]
+        :type: list[Minimums]
         """
 
         self._data = data

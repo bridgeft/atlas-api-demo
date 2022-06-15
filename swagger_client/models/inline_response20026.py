@@ -35,7 +35,7 @@ class InlineResponse20026(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1billing1invoicesgetresponses200contentapplication1jsonschemapropertiesdataitems]'
+        'data': 'list[Split]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20026(object):
 
 
         :return: The data of this InlineResponse20026.  # noqa: E501
-        :rtype: list[Paths1billing1invoicesgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :rtype: list[Split]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20026(object):
 
 
         :param data: The data of this InlineResponse20026.  # noqa: E501
-        :type: list[Paths1billing1invoicesgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :type: list[Split]
         """
 
         self._data = data

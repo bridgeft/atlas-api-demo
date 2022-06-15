@@ -35,7 +35,7 @@ class InlineResponse20049(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1reporting1printableReportsgetresponses200contentapplication1jsonschemapropertiesdataitems]'
+        'data': 'list[GainLoss]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20049(object):
 
 
         :return: The data of this InlineResponse20049.  # noqa: E501
-        :rtype: list[Paths1reporting1printableReportsgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :rtype: list[GainLoss]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20049(object):
 
 
         :param data: The data of this InlineResponse20049.  # noqa: E501
-        :type: list[Paths1reporting1printableReportsgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :type: list[GainLoss]
         """
 
         self._data = data

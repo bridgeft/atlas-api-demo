@@ -35,7 +35,7 @@ class InlineResponse20090(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1userManagement1roles1createManypostresponses200contentapplication1jsonschemaitems]'
+        'data': 'list[Strategy]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20090(object):
 
 
         :return: The data of this InlineResponse20090.  # noqa: E501
-        :rtype: list[Paths1userManagement1roles1createManypostresponses200contentapplication1jsonschemaitems]
+        :rtype: list[Strategy]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20090(object):
 
 
         :param data: The data of this InlineResponse20090.  # noqa: E501
-        :type: list[Paths1userManagement1roles1createManypostresponses200contentapplication1jsonschemaitems]
+        :type: list[Strategy]
         """
 
         self._data = data

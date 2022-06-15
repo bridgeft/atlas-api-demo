@@ -35,7 +35,7 @@ class InlineResponse20035(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1billing1splitspostresponses200contentapplication1jsonschemapropertiesdataitems]'
+        'data': 'list[TargetAllocation]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20035(object):
 
 
         :return: The data of this InlineResponse20035.  # noqa: E501
-        :rtype: list[Paths1billing1splitspostresponses200contentapplication1jsonschemapropertiesdataitems]
+        :rtype: list[TargetAllocation]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20035(object):
 
 
         :param data: The data of this InlineResponse20035.  # noqa: E501
-        :type: list[Paths1billing1splitspostresponses200contentapplication1jsonschemapropertiesdataitems]
+        :type: list[TargetAllocation]
         """
 
         self._data = data

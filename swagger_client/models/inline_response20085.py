@@ -35,7 +35,7 @@ class InlineResponse20085(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Paths1data1luca1accountHistoricalBalances1currentgetresponses200contentapplication1jsonschemapropertiesdataitems]'
+        'data': 'list[FileSharing]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20085(object):
 
 
         :return: The data of this InlineResponse20085.  # noqa: E501
-        :rtype: list[Paths1data1luca1accountHistoricalBalances1currentgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :rtype: list[FileSharing]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20085(object):
 
 
         :param data: The data of this InlineResponse20085.  # noqa: E501
-        :type: list[Paths1data1luca1accountHistoricalBalances1currentgetresponses200contentapplication1jsonschemapropertiesdataitems]
+        :type: list[FileSharing]
         """
 
         self._data = data

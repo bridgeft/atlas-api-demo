@@ -35,7 +35,7 @@ class InlineResponse2008(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Firm]'
+        'data': 'list[Client]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse2008(object):
 
 
         :return: The data of this InlineResponse2008.  # noqa: E501
-        :rtype: list[Firm]
+        :rtype: list[Client]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse2008(object):
 
 
         :param data: The data of this InlineResponse2008.  # noqa: E501
-        :type: list[Firm]
+        :type: list[Client]
         """
 
         self._data = data
