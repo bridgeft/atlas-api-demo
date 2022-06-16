@@ -21,7 +21,7 @@ def list_latest_holdings():
     :return:
     """
 
-    # get a latest date, this could be yesterday's date or the last market date.
+    # get the latest date, this could be yesterday's date or the last market date.
     latest_date = (datetime.datetime.now() - timedelta(1)).date()
 
     # to fetch the latest holdings for each account filter body is set with as of date as yesterday's date
