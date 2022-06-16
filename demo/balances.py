@@ -70,13 +70,18 @@ def balances_to_csv():
         csv_path = f'./balance_csv_files/{accountId}_balance.csv'
         data_to_file = open(csv_path, 'w', newline='')  # need to close at the end
         csv_writer = csv.writer(data_to_file, delimiter=",")
-        csv_writer.writerow(["Date", "Account ID"])
+        csv_writer.writerow(["Date", "Account ID", "Beginning Period Value", "Cash Value", "Security Holding Value",
+                             "Net Return Percent"])
 
         for balance in balances:
             date = balance["as_of_date"],
-            account_id = balance["account_id"]
+            account_id = balance["account_id"],
+            beginning_value = balance["beginning_period_value"],
+            cash_value = balance["cash_value"],
+            sec_holding_value = balance["security_holdings_value"],
+            return_percent = balance["percentage_period_net_return"]
 
-            csv_writer.writerow([date, account_id])
+            csv_writer.writerow([date, account_id, beginning_value, cash_value, sec_holding_value, return_percent])
         data_to_file.close()
         break
 
