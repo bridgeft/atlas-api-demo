@@ -1,17 +1,24 @@
 from __future__ import print_function
 import swagger_client
 import websocket
-from demo import authed_client
+from demo import authed_client, get_id_token
 import json
 import wget
 
-# TODO: Use code to get this
-auth_token = ''
+auth_token = get_id_token()
 billing_api = swagger_client.BillingReportsApi(authed_client())
 invoice_api = swagger_client.InvoicesApi(authed_client())
 
-# Logs the message and processes accordingly
+
 def on_message(ws, message):
+    """
+    Called when a new websocket message has been received.
+    Logs the websocket message and processes accordingly
+
+    :param ws: The websocket-client
+    :param message: The received websocket message
+    :return:
+    """
     msg_obj = json.loads(message)
 
     num_steps = msg_obj.get('total')
@@ -21,44 +28,47 @@ def on_message(ws, message):
     print(msg_obj)
     print("")
 
+    # handle completed billing message
     if msg_obj.get('job_type') == "b" and msg_obj.get('state') == 'complete' and msg_obj.get('object_id') is not None:
-        # get the billing report and log the response
         print("### Billing Completed ###\n")
 
         billing_report_id = msg_obj.get('object_id')
         process_invoices(billing_report_id)
 
+    # handle completed bulk download
     if msg_obj.get('job_type') == "bd" and msg_obj.get('state') == 'complete':
-        # download
+
+        # the websocket message returns a download link for the zipped invoices
         invoice_url = msg_obj.get('download_link')
 
         download(invoice_url)
 
-
-def on_error(ws, error):
-    print(error)
-
-
-def on_close(ws, close_status_code, close_msg):
-    print("### closed ###")
+        # process is completed, the websocket should be closed
+        ws.close()
 
 
 def on_open(ws):
-    # when the connection is opened, start your billing report job
-    resp = billing_api.start_billing_report_start_pdf(body={
-        'firm_id': 39,
-        'create_invoices': True,
-        'billing_date': '2022-04-01',
-        'period_type': 'standard',
-    })
+    """
+    Called when the websocket connection has been established.
+    Starts the billing report.
 
-    print("### Billing Started ### ")
+    :param ws: The websocket-client
+    :return:
+    """
+    start_billing_report()
 
 
 def start_billing_report():
-    # when the connection is opened, start your billing report job
+    """
+    Starts a billing job using the API Client
+
+    Endpoint: /billing/reports [POST]
+
+    :return:
+    """
     _ = billing_api.start_billing_report_start_pdf(body={
         'firm_id': 39,
+        'create_invoices': True,
         'billing_date': '2022-04-01',
         'period_type': 'standard',
     })
@@ -67,6 +77,12 @@ def start_billing_report():
 
 
 def process_invoices(billing_report_id):
+    """
+    Fetches invoices and initiates a bulk download for the completed billing report.
+
+    :param billing_report_id:
+    :return:
+    """
     print("### Fetching Invoices ###\n")
 
     invoice_ids = fetch_invoices(billing_report_id)
@@ -78,8 +94,17 @@ def process_invoices(billing_report_id):
     initiate_bulk_download_of_invoices(invoice_ids)
 
 
+#
 def fetch_invoices(billing_report_id):
-    # get invoices and return array of ids
+    """
+    Fetches the ids completed billing report's invoices
+
+    Endpoint: /billing/invoices/filter
+
+    :param billing_report_id:
+    :return: List of invoice IDs
+    """
+
     resp = invoice_api.filter_invoices(body = {
         'billing_report_id': billing_report_id
     })
@@ -97,7 +122,16 @@ def fetch_invoices(billing_report_id):
 
 
 def initiate_bulk_download_of_invoices(invoice_ids):
-    # bulk download
+    """
+    Starts a bulk download job.
+    Status updates for this job will be received in the on_message callback and handled accordingly.
+
+    Endpoint: /billing/invoices/download
+
+    :param invoice_ids: Generated invoice IDs
+    :return:
+    """
+
     print("### Starting Bulk Download ###\n")
     _ = invoice_api.filter_invoice_bulk_download(body={
         'ids': invoice_ids
@@ -105,6 +139,12 @@ def initiate_bulk_download_of_invoices(invoice_ids):
 
 
 def download(url):
+    """
+    Uses wget to download the zip files from the provided url
+
+    :param url: Url for the zipped invoices.
+    :return:
+    """
     # download
     print("### Downloading Invoices ###\n")
 
@@ -112,18 +152,18 @@ def download(url):
 
     print("\n### Invoices downloaded ###\n")
 
-    exit()
-
 
 def main():
+    """
+    Initializes the websocket connection and receives registers callbacks.
+    Messages are processed and handled by the callbacks when new websocket messages are received.
 
-    # Connect to a websocket to receive messages on your job status.
-    # Provided callbacks handle messages as they are received.
+    :return:
+    """
+
     ws = websocket.WebSocketApp(f'wss://4s7vk7rtwc.execute-api.us-east-1.amazonaws.com/prod/?queryauth={auth_token}',
                                 on_open=on_open,
-                                on_message=on_message,
-                                on_error=on_error,
-                                on_close=on_close)
+                                on_message=on_message)
 
     ws.run_forever()
 
