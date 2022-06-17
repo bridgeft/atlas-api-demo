@@ -32,44 +32,44 @@ class APIKeysApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_api(self, body, **kwargs):  # noqa: E501
+    def create_api_key(self, body, **kwargs):  # noqa: E501
         """Create an API Key  # noqa: E501
 
         Returns the updated API key  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_api(body, async_req=True)
+        >>> thread = api.create_api_key(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param ApiKeyCreate body: (required)
+        :param AuthmanagementApikeysBody body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20067
+        :return: InlineResponse20089
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_api_with_http_info(body, **kwargs)  # noqa: E501
+            return self.create_api_key_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_api_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.create_api_key_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def create_api_with_http_info(self, body, **kwargs):  # noqa: E501
+    def create_api_key_with_http_info(self, body, **kwargs):  # noqa: E501
         """Create an API Key  # noqa: E501
 
         Returns the updated API key  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_api_with_http_info(body, async_req=True)
+        >>> thread = api.create_api_key_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param ApiKeyCreate body: (required)
+        :param AuthmanagementApikeysBody body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20067
+        :return: InlineResponse20089
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -85,14 +85,14 @@ class APIKeysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_api" % key
+                    " to method create_api_key" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_api`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `create_api_key`")  # noqa: E501
 
         collection_formats = {}
 
@@ -131,7 +131,7 @@ class APIKeysApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20067',  # noqa: E501
+            response_type='InlineResponse20089',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -139,44 +139,44 @@ class APIKeysApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def detele_api(self, id, **kwargs):  # noqa: E501
+    def detele_api_key(self, id, **kwargs):  # noqa: E501
         """Delete an API Key  # noqa: E501
 
         Returns the \"OK\" message and a json object with the id  of item deleted, if deletion was successful  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.detele_api(id, async_req=True)
+        >>> thread = api.detele_api_key(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: Delete
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.detele_api_with_http_info(id, **kwargs)  # noqa: E501
+            return self.detele_api_key_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.detele_api_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.detele_api_key_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def detele_api_with_http_info(self, id, **kwargs):  # noqa: E501
+    def detele_api_key_with_http_info(self, id, **kwargs):  # noqa: E501
         """Delete an API Key  # noqa: E501
 
         Returns the \"OK\" message and a json object with the id  of item deleted, if deletion was successful  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.detele_api_with_http_info(id, async_req=True)
+        >>> thread = api.detele_api_key_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: Delete
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -192,14 +192,14 @@ class APIKeysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method detele_api" % key
+                    " to method detele_api_key" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `detele_api`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `detele_api_key`")  # noqa: E501
 
         collection_formats = {}
 
@@ -219,10 +219,6 @@ class APIKeysApi(object):
         local_var_files = {}
 
         body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
         # Authentication setting
         auth_settings = []  # noqa: E501
 
@@ -234,7 +230,7 @@ class APIKeysApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Delete',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -242,44 +238,44 @@ class APIKeysApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_api(self, id, **kwargs):  # noqa: E501
+    def get_api_key(self, id, **kwargs):  # noqa: E501
         """Retrieve an API key  # noqa: E501
 
         Returns an API key based on a single ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_api(id, async_req=True)
+        >>> thread = api.get_api_key(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20067
+        :return: InlineResponse20089
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_api_with_http_info(id, **kwargs)  # noqa: E501
+            return self.get_api_key_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_api_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.get_api_key_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def get_api_with_http_info(self, id, **kwargs):  # noqa: E501
+    def get_api_key_with_http_info(self, id, **kwargs):  # noqa: E501
         """Retrieve an API key  # noqa: E501
 
         Returns an API key based on a single ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_api_with_http_info(id, async_req=True)
+        >>> thread = api.get_api_key_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20067
+        :return: InlineResponse20089
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -295,14 +291,14 @@ class APIKeysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_api" % key
+                    " to method get_api_key" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_api`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `get_api_key`")  # noqa: E501
 
         collection_formats = {}
 
@@ -337,7 +333,7 @@ class APIKeysApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20067',  # noqa: E501
+            response_type='InlineResponse20089',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -345,42 +341,42 @@ class APIKeysApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_apis(self, **kwargs):  # noqa: E501
+    def get_api_keys(self, **kwargs):  # noqa: E501
         """Retrieve all API keys  # noqa: E501
 
         Returns a list of api keys within the data field  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_apis(async_req=True)
+        >>> thread = api.get_api_keys(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20067
+        :return: InlineResponse20088
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_apis_with_http_info(**kwargs)  # noqa: E501
+            return self.get_api_keys_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.get_apis_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_api_keys_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def get_apis_with_http_info(self, **kwargs):  # noqa: E501
+    def get_api_keys_with_http_info(self, **kwargs):  # noqa: E501
         """Retrieve all API keys  # noqa: E501
 
         Returns a list of api keys within the data field  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_apis_with_http_info(async_req=True)
+        >>> thread = api.get_api_keys_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20067
+        :return: InlineResponse20088
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -396,7 +392,7 @@ class APIKeysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_apis" % key
+                    " to method get_api_keys" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -432,7 +428,7 @@ class APIKeysApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20067',  # noqa: E501
+            response_type='InlineResponse20088',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
