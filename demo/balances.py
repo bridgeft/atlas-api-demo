@@ -12,12 +12,7 @@ api = swagger_client.AccountBalancesApi(authed_client())
 
 def list_balances():
     """
-    Demonstrates listing API keys
-    API keys can be managed (created, read, deleted) by creating a temporary oauth2 id token
-    from the /v2/oauth2/token endpoint, which can be used as a bearer token until expiration
-
-    It's recommended to create and manage API keys for machine-to-machine backend applications
-    for use cases where expiration and key management isn't necessary
+    Demonstrates listing all account balances.
 
     :return:
     """
@@ -32,6 +27,11 @@ def list_balances():
 
 def list_current_balances():
 
+    """
+    Demonstrate listing account current balances
+
+    """
+
     # get all current balances
     print("get current balances")
     resp = api.get_account_current_balances()
@@ -40,7 +40,13 @@ def list_current_balances():
     print(resp[:2])
 
 
-def balances_to_csv():
+def balances_by_account_to_csv():
+    """
+    Demonstrates
+    1. Fetching all balances through pagination
+    2. Copying time series balances for each account to csv files
+
+    """
 
     # fetch all balances
     print("fetch balances for all accounts")
@@ -85,12 +91,12 @@ def balances_to_csv():
         data_to_file.close()
         break
 
-    print("writing balance to csv complete!!")
+    print("copying balances to csv complete!!")
 
 
 def main():
     """
-    Entry point for api key demonstration
+    Entry point for balance api demonstration
 
     :return:
     """
@@ -98,7 +104,7 @@ def main():
 
     list_current_balances()
 
-    balances_to_csv()
+    balances_by_account_to_csv()
 
 
 if __name__ == '__main__':

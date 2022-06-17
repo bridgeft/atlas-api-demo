@@ -11,12 +11,7 @@ api = swagger_client.AccountHoldingsApi(authed_client())
 
 def list_latest_holdings():
     """
-    Demonstrates listing API keys
-    API keys can be managed (created, read, deleted) by creating a temporary oauth2 id token
-    from the /v2/oauth2/token endpoint, which can be used as a bearer token until expiration
-
-    It's recommended to create and manage API keys for machine-to-machine backend applications
-    for use cases where expiration and key management isn't necessary
+    Demonstrates listing latest holdings
 
     :return:
     """
@@ -24,7 +19,7 @@ def list_latest_holdings():
     # get the latest date, this could be yesterday's date or the last market date.
     latest_date = (datetime.datetime.now() - timedelta(1)).date()
 
-    # to fetch the latest holdings for each account filter body is set with as of date as yesterday's date
+    # the latest holdings is filtered by as_of_date = yesterday's date
     filter_body = {
         'as_of_date': latest_date,
     }
@@ -50,9 +45,11 @@ def holdings_to_csv(path='holdings.csv'):
         'as_of_date': latest_date,
     }
 
+    print("fetch account holdings for as_of_date = yesterday")
     resp = api.filter_account_holdings(body=filter_body)
 
-    # Opening a CSV file for writing in write mode
+    print("start writing holdings to a csv file")
+    # Writing to a csv file
     data_file = open(path, 'w')
     csv_writer = csv.writer(data_file)
 
@@ -66,10 +63,11 @@ def holdings_to_csv(path='holdings.csv'):
 
     data_file.close()
 
+    print("csv file generation complete!!")
 
 def main():
     """
-    Entry point for api key demonstration
+    Entry point for account holding api demonstration
 
     :return:
     """
