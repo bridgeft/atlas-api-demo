@@ -2,21 +2,15 @@ from __future__ import print_function
 import csv
 
 import swagger_client
-from demo import configuration, authed_client
+from demo import authed_client
 
 # declare an instance of the api for interacting with the account balance resource
 api = swagger_client.AccountBalancesApi(authed_client())
 
 
-def generate_aum_data_csv():
+def generate_aum_balance_to_csv():
     """
-    Demonstrates listing API keys
-    API keys can be managed (created, read, deleted) by creating a temporary oauth2 id token
-    from the /v2/oauth2/token endpoint, which can be used as a bearer token until expiration
-
-    It's recommended to create and manage API keys for machine-to-machine backend applications
-    for use cases where expiration and key management isn't necessary
-
+    Demonstrates fetching account balance and generating aum balance time series csv file
     :return:
     """
 
@@ -54,11 +48,11 @@ def generate_aum_data_csv():
 
 def main():
     """
-    Entry point for api key demonstration
+    Entry point for aum balance demonstration
 
     :return:
     """
-    generate_aum_data_csv()
+    generate_aum_balance_to_csv()
 
 
 if __name__ == '__main__':
