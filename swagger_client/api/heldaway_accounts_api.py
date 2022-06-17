@@ -42,7 +42,7 @@ class HeldawayAccountsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HeldawayAccountFilter body:
+        :param AccountsFilterBody1 body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
         :return: InlineResponse2004
@@ -66,7 +66,7 @@ class HeldawayAccountsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HeldawayAccountFilter body:
+        :param AccountsFilterBody1 body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
         :return: InlineResponse2004

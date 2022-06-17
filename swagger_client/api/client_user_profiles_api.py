@@ -42,10 +42,10 @@ class ClientUserProfilesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ClientUserCreate body: (required)
+        :param UsermanagementClientprofilesBody body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20073
+        :return: InlineResponse20078
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,10 +66,10 @@ class ClientUserProfilesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ClientUserCreate body: (required)
+        :param UsermanagementClientprofilesBody body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20073
+        :return: InlineResponse20078
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -131,7 +131,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20073',  # noqa: E501
+            response_type='InlineResponse20078',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -149,10 +149,10 @@ class ClientUserProfilesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[ClientUserCreate] body: (required)
+        :param list[Paths1userManagement1clientProfilespostrequestBodycontentapplication1jsonschema] body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -173,10 +173,10 @@ class ClientUserProfilesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[ClientUserCreate] body: (required)
+        :param list[Paths1userManagement1clientProfilespostrequestBodycontentapplication1jsonschema] body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -238,7 +238,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20072',  # noqa: E501
+            response_type='InlineResponse20077',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -259,7 +259,7 @@ class ClientUserProfilesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: Delete
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -283,7 +283,7 @@ class ClientUserProfilesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: Delete
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -326,10 +326,6 @@ class ClientUserProfilesApi(object):
         local_var_files = {}
 
         body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
         # Authentication setting
         auth_settings = []  # noqa: E501
 
@@ -341,7 +337,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Delete',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -362,7 +358,7 @@ class ClientUserProfilesApi(object):
         :param object body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: DeleteMany
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -386,7 +382,7 @@ class ClientUserProfilesApi(object):
         :param object body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: DeleteMany
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -429,10 +425,6 @@ class ClientUserProfilesApi(object):
         body_params = None
         if 'body' in params:
             body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
@@ -448,7 +440,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DeleteMany',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -466,10 +458,10 @@ class ClientUserProfilesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ClientUserFilter body:
+        :param ClientprofilesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -490,10 +482,10 @@ class ClientUserProfilesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ClientUserFilter body:
+        :param ClientprofilesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -551,7 +543,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20072',  # noqa: E501
+            response_type='InlineResponse20077',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -572,7 +564,7 @@ class ClientUserProfilesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20073
+        :return: InlineResponse20078
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -596,7 +588,7 @@ class ClientUserProfilesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20073
+        :return: InlineResponse20078
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -654,7 +646,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20073',  # noqa: E501
+            response_type='InlineResponse20078',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -674,7 +666,7 @@ class ClientUserProfilesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -697,7 +689,7 @@ class ClientUserProfilesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -749,7 +741,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20072',  # noqa: E501
+            response_type='InlineResponse20077',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -770,7 +762,7 @@ class ClientUserProfilesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20073
+        :return: InlineResponse20078
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -794,7 +786,7 @@ class ClientUserProfilesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20073
+        :return: InlineResponse20078
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -852,7 +844,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20073',  # noqa: E501
+            response_type='InlineResponse20078',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -872,7 +864,7 @@ class ClientUserProfilesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -895,7 +887,7 @@ class ClientUserProfilesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20072
+        :return: InlineResponse20077
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -947,7 +939,7 @@ class ClientUserProfilesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20072',  # noqa: E501
+            response_type='InlineResponse20077',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

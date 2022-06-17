@@ -42,10 +42,10 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SecurityFilter body:
+        :param SecuritiesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20080
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,10 +66,10 @@ class SecuritiesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SecurityFilter body:
+        :param SecuritiesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20080
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -127,7 +127,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20080',  # noqa: E501
+            response_type='InlineResponse20085',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -147,7 +147,7 @@ class SecuritiesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20080
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -170,7 +170,7 @@ class SecuritiesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20080
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -222,7 +222,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20080',  # noqa: E501
+            response_type='InlineResponse20085',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -243,7 +243,7 @@ class SecuritiesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20081
+        :return: InlineResponse20086
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -267,7 +267,7 @@ class SecuritiesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20081
+        :return: InlineResponse20086
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -325,7 +325,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20081',  # noqa: E501
+            response_type='InlineResponse20086',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -441,7 +441,7 @@ class SecuritiesApi(object):
         :param SecuritiesFetchBody body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20080
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -465,7 +465,7 @@ class SecuritiesApi(object):
         :param SecuritiesFetchBody body: (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20080
+        :return: InlineResponse20085
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -527,7 +527,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20080',  # noqa: E501
+            response_type='InlineResponse20085',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -643,7 +643,7 @@ class SecuritiesApi(object):
         :param str q: The symbol or description of a Security to filter by (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20081
+        :return: InlineResponse20086
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -667,7 +667,7 @@ class SecuritiesApi(object):
         :param str q: The symbol or description of a Security to filter by (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20081
+        :return: InlineResponse20086
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -725,7 +725,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20081',  # noqa: E501
+            response_type='InlineResponse20086',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -745,7 +745,7 @@ class SecuritiesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20081
+        :return: InlineResponse20086
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -768,7 +768,7 @@ class SecuritiesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20081
+        :return: InlineResponse20086
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -820,7 +820,7 @@ class SecuritiesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20081',  # noqa: E501
+            response_type='InlineResponse20086',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

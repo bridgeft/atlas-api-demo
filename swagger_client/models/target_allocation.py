@@ -32,7 +32,7 @@ class TargetAllocation(object):
         'firm_id': 'int',
         'name': 'int',
         'slug': 'str',
-        'coefficients': 'list[Coefficient]',
+        'coefficients': 'list[TargetAllocationCoefficients]',
         'created_at_utc': 'datetime',
         'updated_at_utc': 'datetime'
     }
@@ -171,7 +171,7 @@ class TargetAllocation(object):
         Target allocation coefficient  # noqa: E501
 
         :return: The coefficients of this TargetAllocation.  # noqa: E501
-        :rtype: list[Coefficient]
+        :rtype: list[TargetAllocationCoefficients]
         """
         return self._coefficients
 
@@ -182,7 +182,7 @@ class TargetAllocation(object):
         Target allocation coefficient  # noqa: E501
 
         :param coefficients: The coefficients of this TargetAllocation.  # noqa: E501
-        :type: list[Coefficient]
+        :type: list[TargetAllocationCoefficients]
         """
 
         self._coefficients = coefficients

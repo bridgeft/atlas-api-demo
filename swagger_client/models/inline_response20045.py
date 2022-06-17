@@ -28,222 +28,322 @@ class InlineResponse20045(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'object': 'str',
-        'has_next': 'bool',
-        'has_previous': 'bool',
-        'current_page': 'int',
-        'total_pages': 'int',
-        'page_size_limit': 'int',
-        'total_items': 'int',
-        'data': 'list[BuySell]'
+        'name': 'str',
+        'benchmark_id': 'int',
+        '_date': 'datetime',
+        'mtd_return': 'float',
+        'qtd_return': 'float',
+        'ytd_return': 'float',
+        'itd_return': 'float',
+        'itd_annual_return': 'float',
+        'one_yr_return': 'float',
+        'three_yr_return': 'float',
+        'five_yr_return': 'float'
     }
 
     attribute_map = {
-        'object': 'object',
-        'has_next': 'has_next',
-        'has_previous': 'has_previous',
-        'current_page': 'current_page',
-        'total_pages': 'total_pages',
-        'page_size_limit': 'page_size_limit',
-        'total_items': 'total_items',
-        'data': 'data'
+        'name': 'name',
+        'benchmark_id': 'benchmark_id',
+        '_date': 'date',
+        'mtd_return': 'mtd_return',
+        'qtd_return': 'qtd_return',
+        'ytd_return': 'ytd_return',
+        'itd_return': 'itd_return',
+        'itd_annual_return': 'itd_annual_return',
+        'one_yr_return': 'one_yr_return',
+        'three_yr_return': 'three_yr_return',
+        'five_yr_return': 'five_yr_return'
     }
 
-    def __init__(self, object=None, has_next=None, has_previous=None, current_page=None, total_pages=None, page_size_limit=None, total_items=None, data=None):  # noqa: E501
+    def __init__(self, name=None, benchmark_id=None, _date=None, mtd_return=None, qtd_return=None, ytd_return=None, itd_return=None, itd_annual_return=None, one_yr_return=None, three_yr_return=None, five_yr_return=None):  # noqa: E501
         """InlineResponse20045 - a model defined in Swagger"""  # noqa: E501
-        self._object = None
-        self._has_next = None
-        self._has_previous = None
-        self._current_page = None
-        self._total_pages = None
-        self._page_size_limit = None
-        self._total_items = None
-        self._data = None
+        self._name = None
+        self._benchmark_id = None
+        self.__date = None
+        self._mtd_return = None
+        self._qtd_return = None
+        self._ytd_return = None
+        self._itd_return = None
+        self._itd_annual_return = None
+        self._one_yr_return = None
+        self._three_yr_return = None
+        self._five_yr_return = None
         self.discriminator = None
-        if object is not None:
-            self.object = object
-        if has_next is not None:
-            self.has_next = has_next
-        if has_previous is not None:
-            self.has_previous = has_previous
-        if current_page is not None:
-            self.current_page = current_page
-        if total_pages is not None:
-            self.total_pages = total_pages
-        if page_size_limit is not None:
-            self.page_size_limit = page_size_limit
-        if total_items is not None:
-            self.total_items = total_items
-        if data is not None:
-            self.data = data
+        if name is not None:
+            self.name = name
+        if benchmark_id is not None:
+            self.benchmark_id = benchmark_id
+        if _date is not None:
+            self._date = _date
+        if mtd_return is not None:
+            self.mtd_return = mtd_return
+        if qtd_return is not None:
+            self.qtd_return = qtd_return
+        if ytd_return is not None:
+            self.ytd_return = ytd_return
+        if itd_return is not None:
+            self.itd_return = itd_return
+        if itd_annual_return is not None:
+            self.itd_annual_return = itd_annual_return
+        if one_yr_return is not None:
+            self.one_yr_return = one_yr_return
+        if three_yr_return is not None:
+            self.three_yr_return = three_yr_return
+        if five_yr_return is not None:
+            self.five_yr_return = five_yr_return
 
     @property
-    def object(self):
-        """Gets the object of this InlineResponse20045.  # noqa: E501
+    def name(self):
+        """Gets the name of this InlineResponse20045.  # noqa: E501
 
+        Name for the benchmark object  # noqa: E501
 
-        :return: The object of this InlineResponse20045.  # noqa: E501
+        :return: The name of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._object
+        return self._name
 
-    @object.setter
-    def object(self, object):
-        """Sets the object of this InlineResponse20045.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineResponse20045.
 
+        Name for the benchmark object  # noqa: E501
 
-        :param object: The object of this InlineResponse20045.  # noqa: E501
+        :param name: The name of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._object = object
+        self._name = name
 
     @property
-    def has_next(self):
-        """Gets the has_next of this InlineResponse20045.  # noqa: E501
+    def benchmark_id(self):
+        """Gets the benchmark_id of this InlineResponse20045.  # noqa: E501
 
+        ID for the benchmakr object  # noqa: E501
 
-        :return: The has_next of this InlineResponse20045.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_next
-
-    @has_next.setter
-    def has_next(self, has_next):
-        """Sets the has_next of this InlineResponse20045.
-
-
-        :param has_next: The has_next of this InlineResponse20045.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_next = has_next
-
-    @property
-    def has_previous(self):
-        """Gets the has_previous of this InlineResponse20045.  # noqa: E501
-
-
-        :return: The has_previous of this InlineResponse20045.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_previous
-
-    @has_previous.setter
-    def has_previous(self, has_previous):
-        """Sets the has_previous of this InlineResponse20045.
-
-
-        :param has_previous: The has_previous of this InlineResponse20045.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_previous = has_previous
-
-    @property
-    def current_page(self):
-        """Gets the current_page of this InlineResponse20045.  # noqa: E501
-
-
-        :return: The current_page of this InlineResponse20045.  # noqa: E501
+        :return: The benchmark_id of this InlineResponse20045.  # noqa: E501
         :rtype: int
         """
-        return self._current_page
+        return self._benchmark_id
 
-    @current_page.setter
-    def current_page(self, current_page):
-        """Sets the current_page of this InlineResponse20045.
+    @benchmark_id.setter
+    def benchmark_id(self, benchmark_id):
+        """Sets the benchmark_id of this InlineResponse20045.
 
+        ID for the benchmakr object  # noqa: E501
 
-        :param current_page: The current_page of this InlineResponse20045.  # noqa: E501
+        :param benchmark_id: The benchmark_id of this InlineResponse20045.  # noqa: E501
         :type: int
         """
 
-        self._current_page = current_page
+        self._benchmark_id = benchmark_id
 
     @property
-    def total_pages(self):
-        """Gets the total_pages of this InlineResponse20045.  # noqa: E501
+    def _date(self):
+        """Gets the _date of this InlineResponse20045.  # noqa: E501
 
+        Date for which the benchmark is calculated  # noqa: E501
 
-        :return: The total_pages of this InlineResponse20045.  # noqa: E501
-        :rtype: int
+        :return: The _date of this InlineResponse20045.  # noqa: E501
+        :rtype: datetime
         """
-        return self._total_pages
+        return self.__date
 
-    @total_pages.setter
-    def total_pages(self, total_pages):
-        """Sets the total_pages of this InlineResponse20045.
+    @_date.setter
+    def _date(self, _date):
+        """Sets the _date of this InlineResponse20045.
 
+        Date for which the benchmark is calculated  # noqa: E501
 
-        :param total_pages: The total_pages of this InlineResponse20045.  # noqa: E501
-        :type: int
+        :param _date: The _date of this InlineResponse20045.  # noqa: E501
+        :type: datetime
         """
 
-        self._total_pages = total_pages
+        self.__date = _date
 
     @property
-    def page_size_limit(self):
-        """Gets the page_size_limit of this InlineResponse20045.  # noqa: E501
+    def mtd_return(self):
+        """Gets the mtd_return of this InlineResponse20045.  # noqa: E501
 
+        Benchmark month to date return, percentage scale  # noqa: E501
 
-        :return: The page_size_limit of this InlineResponse20045.  # noqa: E501
-        :rtype: int
+        :return: The mtd_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
         """
-        return self._page_size_limit
+        return self._mtd_return
 
-    @page_size_limit.setter
-    def page_size_limit(self, page_size_limit):
-        """Sets the page_size_limit of this InlineResponse20045.
+    @mtd_return.setter
+    def mtd_return(self, mtd_return):
+        """Sets the mtd_return of this InlineResponse20045.
 
+        Benchmark month to date return, percentage scale  # noqa: E501
 
-        :param page_size_limit: The page_size_limit of this InlineResponse20045.  # noqa: E501
-        :type: int
+        :param mtd_return: The mtd_return of this InlineResponse20045.  # noqa: E501
+        :type: float
         """
 
-        self._page_size_limit = page_size_limit
+        self._mtd_return = mtd_return
 
     @property
-    def total_items(self):
-        """Gets the total_items of this InlineResponse20045.  # noqa: E501
+    def qtd_return(self):
+        """Gets the qtd_return of this InlineResponse20045.  # noqa: E501
 
+        Benchmark quarter to date return, percentage scale  # noqa: E501
 
-        :return: The total_items of this InlineResponse20045.  # noqa: E501
-        :rtype: int
+        :return: The qtd_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
         """
-        return self._total_items
+        return self._qtd_return
 
-    @total_items.setter
-    def total_items(self, total_items):
-        """Sets the total_items of this InlineResponse20045.
+    @qtd_return.setter
+    def qtd_return(self, qtd_return):
+        """Sets the qtd_return of this InlineResponse20045.
 
+        Benchmark quarter to date return, percentage scale  # noqa: E501
 
-        :param total_items: The total_items of this InlineResponse20045.  # noqa: E501
-        :type: int
+        :param qtd_return: The qtd_return of this InlineResponse20045.  # noqa: E501
+        :type: float
         """
 
-        self._total_items = total_items
+        self._qtd_return = qtd_return
 
     @property
-    def data(self):
-        """Gets the data of this InlineResponse20045.  # noqa: E501
+    def ytd_return(self):
+        """Gets the ytd_return of this InlineResponse20045.  # noqa: E501
 
+        Benchmark year to date return, percentage scale  # noqa: E501
 
-        :return: The data of this InlineResponse20045.  # noqa: E501
-        :rtype: list[BuySell]
+        :return: The ytd_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
         """
-        return self._data
+        return self._ytd_return
 
-    @data.setter
-    def data(self, data):
-        """Sets the data of this InlineResponse20045.
+    @ytd_return.setter
+    def ytd_return(self, ytd_return):
+        """Sets the ytd_return of this InlineResponse20045.
 
+        Benchmark year to date return, percentage scale  # noqa: E501
 
-        :param data: The data of this InlineResponse20045.  # noqa: E501
-        :type: list[BuySell]
+        :param ytd_return: The ytd_return of this InlineResponse20045.  # noqa: E501
+        :type: float
         """
 
-        self._data = data
+        self._ytd_return = ytd_return
+
+    @property
+    def itd_return(self):
+        """Gets the itd_return of this InlineResponse20045.  # noqa: E501
+
+        Benchmark inception to date return, percentage scale  # noqa: E501
+
+        :return: The itd_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
+        """
+        return self._itd_return
+
+    @itd_return.setter
+    def itd_return(self, itd_return):
+        """Sets the itd_return of this InlineResponse20045.
+
+        Benchmark inception to date return, percentage scale  # noqa: E501
+
+        :param itd_return: The itd_return of this InlineResponse20045.  # noqa: E501
+        :type: float
+        """
+
+        self._itd_return = itd_return
+
+    @property
+    def itd_annual_return(self):
+        """Gets the itd_annual_return of this InlineResponse20045.  # noqa: E501
+
+        Benchmark inception to date annualized return, percentage scale  # noqa: E501
+
+        :return: The itd_annual_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
+        """
+        return self._itd_annual_return
+
+    @itd_annual_return.setter
+    def itd_annual_return(self, itd_annual_return):
+        """Sets the itd_annual_return of this InlineResponse20045.
+
+        Benchmark inception to date annualized return, percentage scale  # noqa: E501
+
+        :param itd_annual_return: The itd_annual_return of this InlineResponse20045.  # noqa: E501
+        :type: float
+        """
+
+        self._itd_annual_return = itd_annual_return
+
+    @property
+    def one_yr_return(self):
+        """Gets the one_yr_return of this InlineResponse20045.  # noqa: E501
+
+        Benchmark one year return, percentage scale  # noqa: E501
+
+        :return: The one_yr_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
+        """
+        return self._one_yr_return
+
+    @one_yr_return.setter
+    def one_yr_return(self, one_yr_return):
+        """Sets the one_yr_return of this InlineResponse20045.
+
+        Benchmark one year return, percentage scale  # noqa: E501
+
+        :param one_yr_return: The one_yr_return of this InlineResponse20045.  # noqa: E501
+        :type: float
+        """
+
+        self._one_yr_return = one_yr_return
+
+    @property
+    def three_yr_return(self):
+        """Gets the three_yr_return of this InlineResponse20045.  # noqa: E501
+
+        Benchmark three year return, percentage scale  # noqa: E501
+
+        :return: The three_yr_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
+        """
+        return self._three_yr_return
+
+    @three_yr_return.setter
+    def three_yr_return(self, three_yr_return):
+        """Sets the three_yr_return of this InlineResponse20045.
+
+        Benchmark three year return, percentage scale  # noqa: E501
+
+        :param three_yr_return: The three_yr_return of this InlineResponse20045.  # noqa: E501
+        :type: float
+        """
+
+        self._three_yr_return = three_yr_return
+
+    @property
+    def five_yr_return(self):
+        """Gets the five_yr_return of this InlineResponse20045.  # noqa: E501
+
+        Benchmark five year return, percentage scale  # noqa: E501
+
+        :return: The five_yr_return of this InlineResponse20045.  # noqa: E501
+        :rtype: float
+        """
+        return self._five_yr_return
+
+    @five_yr_return.setter
+    def five_yr_return(self, five_yr_return):
+        """Sets the five_yr_return of this InlineResponse20045.
+
+        Benchmark five year return, percentage scale  # noqa: E501
+
+        :param five_yr_return: The five_yr_return of this InlineResponse20045.  # noqa: E501
+        :type: float
+        """
+
+        self._five_yr_return = five_yr_return
 
     def to_dict(self):
         """Returns the model properties as a dict"""

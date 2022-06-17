@@ -35,7 +35,7 @@ class InlineResponse20040(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Aums]'
+        'data': 'list[ReportSettings]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20040(object):
 
 
         :return: The data of this InlineResponse20040.  # noqa: E501
-        :rtype: list[Aums]
+        :rtype: list[ReportSettings]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20040(object):
 
 
         :param data: The data of this InlineResponse20040.  # noqa: E501
-        :type: list[Aums]
+        :type: list[ReportSettings]
         """
 
         self._data = data

@@ -35,7 +35,7 @@ class InlineResponse20023(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[MinimumsMany]'
+        'data': 'list[BillingReport]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20023(object):
 
 
         :return: The data of this InlineResponse20023.  # noqa: E501
-        :rtype: list[MinimumsMany]
+        :rtype: list[BillingReport]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20023(object):
 
 
         :param data: The data of this InlineResponse20023.  # noqa: E501
-        :type: list[MinimumsMany]
+        :type: list[BillingReport]
         """
 
         self._data = data

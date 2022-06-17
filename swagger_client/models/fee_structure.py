@@ -40,7 +40,7 @@ class FeeStructure(object):
         'balance_type': 'str',
         'flat_rate': 'float',
         'flat_dollar_fee': 'float',
-        'tiers': 'list[FeestructureTiers]',
+        'tiers': 'list[FeeStructureTiers]',
         'created_at_utc': 'datetime',
         'updated_at_utc': 'datetime'
     }
@@ -413,7 +413,7 @@ class FeeStructure(object):
         Tiers associated with the fee structure  # noqa: E501
 
         :return: The tiers of this FeeStructure.  # noqa: E501
-        :rtype: list[FeestructureTiers]
+        :rtype: list[FeeStructureTiers]
         """
         return self._tiers
 
@@ -424,7 +424,7 @@ class FeeStructure(object):
         Tiers associated with the fee structure  # noqa: E501
 
         :param tiers: The tiers of this FeeStructure.  # noqa: E501
-        :type: list[FeestructureTiers]
+        :type: list[FeeStructureTiers]
         """
 
         self._tiers = tiers

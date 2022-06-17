@@ -43,7 +43,7 @@ class Strategy(object):
         'fact_sheet_available': 'bool',
         'esg': 'bool',
         'etf_action_identifier': 'str',
-        'security_allocations': 'list[SecurityAllocation]',
+        'security_allocations': 'list[StrategySecurityAllocations]',
         'created_at_utc': 'datetime',
         'updated_at_utc': 'datetime'
     }
@@ -491,7 +491,7 @@ class Strategy(object):
         Security allocation associated with this model  # noqa: E501
 
         :return: The security_allocations of this Strategy.  # noqa: E501
-        :rtype: list[SecurityAllocation]
+        :rtype: list[StrategySecurityAllocations]
         """
         return self._security_allocations
 
@@ -502,7 +502,7 @@ class Strategy(object):
         Security allocation associated with this model  # noqa: E501
 
         :param security_allocations: The security_allocations of this Strategy.  # noqa: E501
-        :type: list[SecurityAllocation]
+        :type: list[StrategySecurityAllocations]
         """
 
         self._security_allocations = security_allocations

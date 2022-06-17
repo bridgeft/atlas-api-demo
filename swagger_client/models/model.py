@@ -31,7 +31,7 @@ class Model(object):
         'id': 'int',
         'name': 'str',
         'firm_id': 'int',
-        'strategy_allocations': 'list[StrategyAllocation]',
+        'strategy_allocations': 'list[ModelStrategyAllocations]',
         'created_at_utc': 'datetime',
         'updated_at_utc': 'datetime'
     }
@@ -143,7 +143,7 @@ class Model(object):
         Strategy allocation associated with this model  # noqa: E501
 
         :return: The strategy_allocations of this Model.  # noqa: E501
-        :rtype: list[StrategyAllocation]
+        :rtype: list[ModelStrategyAllocations]
         """
         return self._strategy_allocations
 
@@ -154,7 +154,7 @@ class Model(object):
         Strategy allocation associated with this model  # noqa: E501
 
         :param strategy_allocations: The strategy_allocations of this Model.  # noqa: E501
-        :type: list[StrategyAllocation]
+        :type: list[ModelStrategyAllocations]
         """
 
         self._strategy_allocations = strategy_allocations

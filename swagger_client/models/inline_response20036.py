@@ -35,7 +35,7 @@ class InlineResponse20036(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[PrintableReports]'
+        'data': 'list[TargetAllocations]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20036(object):
 
 
         :return: The data of this InlineResponse20036.  # noqa: E501
-        :rtype: list[PrintableReports]
+        :rtype: list[TargetAllocations]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20036(object):
 
 
         :param data: The data of this InlineResponse20036.  # noqa: E501
-        :type: list[PrintableReports]
+        :type: list[TargetAllocations]
         """
 
         self._data = data
