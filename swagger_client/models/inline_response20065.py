@@ -35,7 +35,7 @@ class InlineResponse20065(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[AccountHistoricalBalance]'
+        'data': 'list[AccountBalance]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20065(object):
 
 
         :return: The data of this InlineResponse20065.  # noqa: E501
-        :rtype: list[AccountHistoricalBalance]
+        :rtype: list[AccountBalance]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20065(object):
 
 
         :param data: The data of this InlineResponse20065.  # noqa: E501
-        :type: list[AccountHistoricalBalance]
+        :type: list[AccountBalance]
         """
 
         self._data = data

@@ -42,10 +42,10 @@ class HeldawayHoldingsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HeldawayHoldingFilter body:
+        :param HoldingsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20079
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,10 +66,10 @@ class HeldawayHoldingsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HeldawayHoldingFilter body:
+        :param HoldingsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20079
+        :return: InlineResponse20084
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -127,7 +127,7 @@ class HeldawayHoldingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20079',  # noqa: E501
+            response_type='InlineResponse20084',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -148,7 +148,7 @@ class HeldawayHoldingsApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20078
+        :return: InlineResponse20083
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -172,7 +172,7 @@ class HeldawayHoldingsApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20078
+        :return: InlineResponse20083
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -230,7 +230,7 @@ class HeldawayHoldingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20078',  # noqa: E501
+            response_type='InlineResponse20083',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -250,7 +250,7 @@ class HeldawayHoldingsApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20078
+        :return: InlineResponse20083
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -273,7 +273,7 @@ class HeldawayHoldingsApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20078
+        :return: InlineResponse20083
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -325,7 +325,7 @@ class HeldawayHoldingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20078',  # noqa: E501
+            response_type='InlineResponse20083',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

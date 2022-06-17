@@ -42,7 +42,7 @@ class AccountsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param AccountFilter body:
+        :param AccountsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
         :return: InlineResponse200
@@ -66,7 +66,7 @@ class AccountsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param AccountFilter body:
+        :param AccountsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
         :return: InlineResponse200

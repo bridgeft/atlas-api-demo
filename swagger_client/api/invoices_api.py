@@ -45,7 +45,7 @@ class InvoicesApi(object):
         :param InvoicesDownloadBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20020
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -69,7 +69,7 @@ class InvoicesApi(object):
         :param InvoicesDownloadBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20020
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -127,7 +127,7 @@ class InvoicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20020',  # noqa: E501
+            response_type='InlineResponse20021',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -145,10 +145,10 @@ class InvoicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param InvoiceFilter body:
+        :param InvoicesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20018
+        :return: InlineResponse20019
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -169,10 +169,10 @@ class InvoicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param InvoiceFilter body:
+        :param InvoicesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20018
+        :return: InlineResponse20019
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -230,7 +230,7 @@ class InvoicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20018',  # noqa: E501
+            response_type='InlineResponse20019',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -251,7 +251,7 @@ class InvoicesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20019
+        :return: InlineResponse20020
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -275,7 +275,7 @@ class InvoicesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20019
+        :return: InlineResponse20020
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -333,7 +333,7 @@ class InvoicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='InlineResponse20020',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -468,7 +468,7 @@ class InvoicesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20018
+        :return: InlineResponse20019
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -491,7 +491,7 @@ class InvoicesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20018
+        :return: InlineResponse20019
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -543,7 +543,7 @@ class InvoicesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20018',  # noqa: E501
+            response_type='InlineResponse20019',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

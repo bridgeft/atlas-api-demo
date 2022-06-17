@@ -35,7 +35,7 @@ class InlineResponse20032(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[ClassificationTag]'
+        'data': 'list[AssetClassification]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20032(object):
 
 
         :return: The data of this InlineResponse20032.  # noqa: E501
-        :rtype: list[ClassificationTag]
+        :rtype: list[AssetClassification]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20032(object):
 
 
         :param data: The data of this InlineResponse20032.  # noqa: E501
-        :type: list[ClassificationTag]
+        :type: list[AssetClassification]
         """
 
         self._data = data

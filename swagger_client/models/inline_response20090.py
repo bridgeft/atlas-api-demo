@@ -35,7 +35,7 @@ class InlineResponse20090(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Strategy]'
+        'data': 'list[FileSharing]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20090(object):
 
 
         :return: The data of this InlineResponse20090.  # noqa: E501
-        :rtype: list[Strategy]
+        :rtype: list[FileSharing]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20090(object):
 
 
         :param data: The data of this InlineResponse20090.  # noqa: E501
-        :type: list[Strategy]
+        :type: list[FileSharing]
         """
 
         self._data = data

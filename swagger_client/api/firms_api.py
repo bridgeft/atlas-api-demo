@@ -42,7 +42,7 @@ class FirmsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FirmFilter body:
+        :param FirmsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
         :return: InlineResponse2005
@@ -66,7 +66,7 @@ class FirmsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FirmFilter body:
+        :param FirmsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
         :return: InlineResponse2005

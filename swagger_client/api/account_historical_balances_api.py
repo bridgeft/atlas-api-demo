@@ -45,7 +45,7 @@ class AccountHistoricalBalancesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20065
+        :return: InlineResponse20070
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -69,7 +69,7 @@ class AccountHistoricalBalancesApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20065
+        :return: InlineResponse20070
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -127,7 +127,7 @@ class AccountHistoricalBalancesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20065',  # noqa: E501
+            response_type='InlineResponse20070',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -147,7 +147,7 @@ class AccountHistoricalBalancesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20064
+        :return: InlineResponse20069
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -170,7 +170,7 @@ class AccountHistoricalBalancesApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20064
+        :return: InlineResponse20069
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -222,7 +222,7 @@ class AccountHistoricalBalancesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20064',  # noqa: E501
+            response_type='InlineResponse20069',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -240,9 +240,7 @@ class AccountHistoricalBalancesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int pager_limit: Number of items to return per page
-        :param int pager_page: Current page number
-        :return: InlineResponse20065
+        :return: list[AccountHistoricalBalance]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -263,14 +261,12 @@ class AccountHistoricalBalancesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int pager_limit: Number of items to return per page
-        :param int pager_page: Current page number
-        :return: InlineResponse20065
+        :return: list[AccountHistoricalBalance]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['pager_limit', 'pager_page']  # noqa: E501
+        all_params = []  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -291,10 +287,6 @@ class AccountHistoricalBalancesApi(object):
         path_params = {}
 
         query_params = []
-        if 'pager_limit' in params:
-            query_params.append(('pager.limit', params['pager_limit']))  # noqa: E501
-        if 'pager_page' in params:
-            query_params.append(('pager.page', params['pager_page']))  # noqa: E501
 
         header_params = {}
 
@@ -317,7 +309,7 @@ class AccountHistoricalBalancesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20065',  # noqa: E501
+            response_type='list[AccountHistoricalBalance]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

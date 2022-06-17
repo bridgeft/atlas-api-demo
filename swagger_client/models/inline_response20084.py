@@ -35,7 +35,7 @@ class InlineResponse20084(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[FileSharings]'
+        'data': 'list[HeldawayHoldings]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20084(object):
 
 
         :return: The data of this InlineResponse20084.  # noqa: E501
-        :rtype: list[FileSharings]
+        :rtype: list[HeldawayHoldings]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20084(object):
 
 
         :param data: The data of this InlineResponse20084.  # noqa: E501
-        :type: list[FileSharings]
+        :type: list[HeldawayHoldings]
         """
 
         self._data = data

@@ -42,10 +42,10 @@ class HeldawayDepositoryTransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HeldawayDepositoryFilter body:
+        :param DepositorytransactionsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20074
+        :return: InlineResponse20079
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,10 +66,10 @@ class HeldawayDepositoryTransactionsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HeldawayDepositoryFilter body:
+        :param DepositorytransactionsFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20074
+        :return: InlineResponse20079
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -127,7 +127,7 @@ class HeldawayDepositoryTransactionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20074',  # noqa: E501
+            response_type='InlineResponse20079',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -147,7 +147,7 @@ class HeldawayDepositoryTransactionsApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20074
+        :return: InlineResponse20079
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -170,7 +170,7 @@ class HeldawayDepositoryTransactionsApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20074
+        :return: InlineResponse20079
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -222,7 +222,7 @@ class HeldawayDepositoryTransactionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20074',  # noqa: E501
+            response_type='InlineResponse20079',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -243,7 +243,7 @@ class HeldawayDepositoryTransactionsApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20075
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -267,7 +267,7 @@ class HeldawayDepositoryTransactionsApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20075
+        :return: InlineResponse20080
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -325,7 +325,7 @@ class HeldawayDepositoryTransactionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20075',  # noqa: E501
+            response_type='InlineResponse20080',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

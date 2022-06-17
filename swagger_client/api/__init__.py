@@ -12,6 +12,7 @@ from swagger_client.api.account_security_balances_api import AccountSecurityBala
 from swagger_client.api.accounts_api import AccountsApi
 from swagger_client.api.asset_adjustment_api import AssetAdjustmentApi
 from swagger_client.api.asset_classifications_api import AssetClassificationsApi
+from swagger_client.api.benchmark_performance_api import BenchmarkPerformanceApi
 from swagger_client.api.benchmarks_api import BenchmarksApi
 from swagger_client.api.billing_group_api import BillingGroupApi
 from swagger_client.api.billing_reports_api import BillingReportsApi
@@ -32,6 +33,7 @@ from swagger_client.api.heldaway_investment_transactions_api import HeldawayInve
 from swagger_client.api.household_balances_api import HouseholdBalancesApi
 from swagger_client.api.household_historical_balances_api import HouseholdHistoricalBalancesApi
 from swagger_client.api.household_holdings_api import HouseholdHoldingsApi
+from swagger_client.api.household_performance_api import HouseholdPerformanceApi
 from swagger_client.api.household_security_balances_api import HouseholdSecurityBalancesApi
 from swagger_client.api.households_api import HouseholdsApi
 from swagger_client.api.income_expense_api import IncomeExpenseApi
@@ -48,4 +50,5 @@ from swagger_client.api.securities_api import SecuritiesApi
 from swagger_client.api.shared_file_api import SharedFileApi
 from swagger_client.api.strategies_api import StrategiesApi
 from swagger_client.api.target_allocations_api import TargetAllocationsApi
+from swagger_client.api.token_api import TokenApi
 from swagger_client.api.transfers_api import TransfersApi

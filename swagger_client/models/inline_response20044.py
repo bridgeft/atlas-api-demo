@@ -28,222 +28,222 @@ class InlineResponse20044(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'object': 'str',
-        'has_next': 'bool',
-        'has_previous': 'bool',
-        'current_page': 'int',
-        'total_pages': 'int',
-        'page_size_limit': 'int',
-        'total_items': 'int',
-        'data': 'list[BuySells]'
+        'mtd': 'MTD',
+        'qtd': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd',
+        'ytd': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd',
+        'one': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd',
+        'three': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd',
+        'five': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd',
+        'itd': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd',
+        'itda': 'Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd'
     }
 
     attribute_map = {
-        'object': 'object',
-        'has_next': 'has_next',
-        'has_previous': 'has_previous',
-        'current_page': 'current_page',
-        'total_pages': 'total_pages',
-        'page_size_limit': 'page_size_limit',
-        'total_items': 'total_items',
-        'data': 'data'
+        'mtd': 'mtd',
+        'qtd': 'qtd',
+        'ytd': 'ytd',
+        'one': 'one',
+        'three': 'three',
+        'five': 'five',
+        'itd': 'itd',
+        'itda': 'itda'
     }
 
-    def __init__(self, object=None, has_next=None, has_previous=None, current_page=None, total_pages=None, page_size_limit=None, total_items=None, data=None):  # noqa: E501
+    def __init__(self, mtd=None, qtd=None, ytd=None, one=None, three=None, five=None, itd=None, itda=None):  # noqa: E501
         """InlineResponse20044 - a model defined in Swagger"""  # noqa: E501
-        self._object = None
-        self._has_next = None
-        self._has_previous = None
-        self._current_page = None
-        self._total_pages = None
-        self._page_size_limit = None
-        self._total_items = None
-        self._data = None
+        self._mtd = None
+        self._qtd = None
+        self._ytd = None
+        self._one = None
+        self._three = None
+        self._five = None
+        self._itd = None
+        self._itda = None
         self.discriminator = None
-        if object is not None:
-            self.object = object
-        if has_next is not None:
-            self.has_next = has_next
-        if has_previous is not None:
-            self.has_previous = has_previous
-        if current_page is not None:
-            self.current_page = current_page
-        if total_pages is not None:
-            self.total_pages = total_pages
-        if page_size_limit is not None:
-            self.page_size_limit = page_size_limit
-        if total_items is not None:
-            self.total_items = total_items
-        if data is not None:
-            self.data = data
+        if mtd is not None:
+            self.mtd = mtd
+        if qtd is not None:
+            self.qtd = qtd
+        if ytd is not None:
+            self.ytd = ytd
+        if one is not None:
+            self.one = one
+        if three is not None:
+            self.three = three
+        if five is not None:
+            self.five = five
+        if itd is not None:
+            self.itd = itd
+        if itda is not None:
+            self.itda = itda
 
     @property
-    def object(self):
-        """Gets the object of this InlineResponse20044.  # noqa: E501
+    def mtd(self):
+        """Gets the mtd of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The object of this InlineResponse20044.  # noqa: E501
-        :rtype: str
+        :return: The mtd of this InlineResponse20044.  # noqa: E501
+        :rtype: MTD
         """
-        return self._object
+        return self._mtd
 
-    @object.setter
-    def object(self, object):
-        """Sets the object of this InlineResponse20044.
+    @mtd.setter
+    def mtd(self, mtd):
+        """Sets the mtd of this InlineResponse20044.
 
 
-        :param object: The object of this InlineResponse20044.  # noqa: E501
-        :type: str
+        :param mtd: The mtd of this InlineResponse20044.  # noqa: E501
+        :type: MTD
         """
 
-        self._object = object
+        self._mtd = mtd
 
     @property
-    def has_next(self):
-        """Gets the has_next of this InlineResponse20044.  # noqa: E501
+    def qtd(self):
+        """Gets the qtd of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The has_next of this InlineResponse20044.  # noqa: E501
-        :rtype: bool
+        :return: The qtd of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._has_next
+        return self._qtd
 
-    @has_next.setter
-    def has_next(self, has_next):
-        """Sets the has_next of this InlineResponse20044.
+    @qtd.setter
+    def qtd(self, qtd):
+        """Sets the qtd of this InlineResponse20044.
 
 
-        :param has_next: The has_next of this InlineResponse20044.  # noqa: E501
-        :type: bool
+        :param qtd: The qtd of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._has_next = has_next
+        self._qtd = qtd
 
     @property
-    def has_previous(self):
-        """Gets the has_previous of this InlineResponse20044.  # noqa: E501
+    def ytd(self):
+        """Gets the ytd of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The has_previous of this InlineResponse20044.  # noqa: E501
-        :rtype: bool
+        :return: The ytd of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._has_previous
+        return self._ytd
 
-    @has_previous.setter
-    def has_previous(self, has_previous):
-        """Sets the has_previous of this InlineResponse20044.
+    @ytd.setter
+    def ytd(self, ytd):
+        """Sets the ytd of this InlineResponse20044.
 
 
-        :param has_previous: The has_previous of this InlineResponse20044.  # noqa: E501
-        :type: bool
+        :param ytd: The ytd of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._has_previous = has_previous
+        self._ytd = ytd
 
     @property
-    def current_page(self):
-        """Gets the current_page of this InlineResponse20044.  # noqa: E501
+    def one(self):
+        """Gets the one of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The current_page of this InlineResponse20044.  # noqa: E501
-        :rtype: int
+        :return: The one of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._current_page
+        return self._one
 
-    @current_page.setter
-    def current_page(self, current_page):
-        """Sets the current_page of this InlineResponse20044.
+    @one.setter
+    def one(self, one):
+        """Sets the one of this InlineResponse20044.
 
 
-        :param current_page: The current_page of this InlineResponse20044.  # noqa: E501
-        :type: int
+        :param one: The one of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._current_page = current_page
+        self._one = one
 
     @property
-    def total_pages(self):
-        """Gets the total_pages of this InlineResponse20044.  # noqa: E501
+    def three(self):
+        """Gets the three of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The total_pages of this InlineResponse20044.  # noqa: E501
-        :rtype: int
+        :return: The three of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._total_pages
+        return self._three
 
-    @total_pages.setter
-    def total_pages(self, total_pages):
-        """Sets the total_pages of this InlineResponse20044.
+    @three.setter
+    def three(self, three):
+        """Sets the three of this InlineResponse20044.
 
 
-        :param total_pages: The total_pages of this InlineResponse20044.  # noqa: E501
-        :type: int
+        :param three: The three of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._total_pages = total_pages
+        self._three = three
 
     @property
-    def page_size_limit(self):
-        """Gets the page_size_limit of this InlineResponse20044.  # noqa: E501
+    def five(self):
+        """Gets the five of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The page_size_limit of this InlineResponse20044.  # noqa: E501
-        :rtype: int
+        :return: The five of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._page_size_limit
+        return self._five
 
-    @page_size_limit.setter
-    def page_size_limit(self, page_size_limit):
-        """Sets the page_size_limit of this InlineResponse20044.
+    @five.setter
+    def five(self, five):
+        """Sets the five of this InlineResponse20044.
 
 
-        :param page_size_limit: The page_size_limit of this InlineResponse20044.  # noqa: E501
-        :type: int
+        :param five: The five of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._page_size_limit = page_size_limit
+        self._five = five
 
     @property
-    def total_items(self):
-        """Gets the total_items of this InlineResponse20044.  # noqa: E501
+    def itd(self):
+        """Gets the itd of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The total_items of this InlineResponse20044.  # noqa: E501
-        :rtype: int
+        :return: The itd of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._total_items
+        return self._itd
 
-    @total_items.setter
-    def total_items(self, total_items):
-        """Sets the total_items of this InlineResponse20044.
+    @itd.setter
+    def itd(self, itd):
+        """Sets the itd of this InlineResponse20044.
 
 
-        :param total_items: The total_items of this InlineResponse20044.  # noqa: E501
-        :type: int
+        :param itd: The itd of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._total_items = total_items
+        self._itd = itd
 
     @property
-    def data(self):
-        """Gets the data of this InlineResponse20044.  # noqa: E501
+    def itda(self):
+        """Gets the itda of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The data of this InlineResponse20044.  # noqa: E501
-        :rtype: list[BuySells]
+        :return: The itda of this InlineResponse20044.  # noqa: E501
+        :rtype: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
-        return self._data
+        return self._itda
 
-    @data.setter
-    def data(self, data):
-        """Sets the data of this InlineResponse20044.
+    @itda.setter
+    def itda(self, itda):
+        """Sets the itda of this InlineResponse20044.
 
 
-        :param data: The data of this InlineResponse20044.  # noqa: E501
-        :type: list[BuySells]
+        :param itda: The itda of this InlineResponse20044.  # noqa: E501
+        :type: Paths1analytics1householdPerformancepostresponses200contentapplication1jsonschemaitemspropertiesmtd
         """
 
-        self._data = data
+        self._itda = itda
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,7 +35,7 @@ class InlineResponse20025(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[Splits]'
+        'data': 'list[Minimuns]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20025(object):
 
 
         :return: The data of this InlineResponse20025.  # noqa: E501
-        :rtype: list[Splits]
+        :rtype: list[Minimuns]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20025(object):
 
 
         :param data: The data of this InlineResponse20025.  # noqa: E501
-        :type: list[Splits]
+        :type: list[Minimuns]
         """
 
         self._data = data

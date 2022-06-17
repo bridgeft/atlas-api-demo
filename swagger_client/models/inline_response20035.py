@@ -35,7 +35,7 @@ class InlineResponse20035(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[TargetAllocation]'
+        'data': 'list[Benchmarks]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse20035(object):
 
 
         :return: The data of this InlineResponse20035.  # noqa: E501
-        :rtype: list[TargetAllocation]
+        :rtype: list[Benchmarks]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse20035(object):
 
 
         :param data: The data of this InlineResponse20035.  # noqa: E501
-        :type: list[TargetAllocation]
+        :type: list[Benchmarks]
         """
 
         self._data = data

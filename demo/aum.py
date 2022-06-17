@@ -44,7 +44,7 @@ def generate_aum_data_csv():
     print('generating aum csv')
     for key, value in balance_value_by_date.items():
         date = key,
-        balance = value
+        balance = round(value, 2)
 
         csv_writer.writerow([date, balance])
     data_to_file.close()

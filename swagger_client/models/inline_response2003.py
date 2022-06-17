@@ -35,7 +35,7 @@ class InlineResponse2003(object):
         'total_pages': 'int',
         'page_size_limit': 'int',
         'total_items': 'int',
-        'data': 'list[HeldawayAccount]'
+        'data': 'list[HealdawayAccount]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class InlineResponse2003(object):
 
 
         :return: The data of this InlineResponse2003.  # noqa: E501
-        :rtype: list[HeldawayAccount]
+        :rtype: list[HealdawayAccount]
         """
         return self._data
 
@@ -240,7 +240,7 @@ class InlineResponse2003(object):
 
 
         :param data: The data of this InlineResponse2003.  # noqa: E501
-        :type: list[HeldawayAccount]
+        :type: list[HealdawayAccount]
         """
 
         self._data = data

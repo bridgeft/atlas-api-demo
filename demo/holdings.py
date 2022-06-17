@@ -66,6 +66,7 @@ def holdings_to_csv(path='holdings.csv'):
 
     data_file.close()
 
+    print("Finish copying luca data to a csv file")
 
 def main():
     """

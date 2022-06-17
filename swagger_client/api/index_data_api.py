@@ -42,10 +42,10 @@ class IndexDataApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param IndexFilter body:
+        :param IndexesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20082
+        :return: InlineResponse20087
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -66,10 +66,10 @@ class IndexDataApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param IndexFilter body:
+        :param IndexesFilterBody body:
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20082
+        :return: InlineResponse20087
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -127,7 +127,7 @@ class IndexDataApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20082',  # noqa: E501
+            response_type='InlineResponse20087',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -148,7 +148,7 @@ class IndexDataApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20083
+        :return: InlineResponse20088
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -172,7 +172,7 @@ class IndexDataApi(object):
         :param int id: Unique ID for the object (required)
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20083
+        :return: InlineResponse20088
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -230,7 +230,7 @@ class IndexDataApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20083',  # noqa: E501
+            response_type='InlineResponse20088',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -250,7 +250,7 @@ class IndexDataApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20082
+        :return: InlineResponse20087
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -273,7 +273,7 @@ class IndexDataApi(object):
         :param async_req bool
         :param int pager_limit: Number of items to return per page
         :param int pager_page: Current page number
-        :return: InlineResponse20082
+        :return: InlineResponse20087
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -325,7 +325,7 @@ class IndexDataApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20082',  # noqa: E501
+            response_type='InlineResponse20087',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
