@@ -1,7 +1,6 @@
 from __future__ import print_function
 import swagger_client
-from demo import configuration, token_authed_client
-import json
+from demo import configuration, token_authed_client, get_id_token
 
 def list_api_keys():
     """
@@ -14,22 +13,10 @@ def list_api_keys():
 
     :return:
     """
-    client = swagger_client.ApiClient(
-        configuration=configuration,
-        header_name="Content-Type",
-        header_value="application/x-www-form-urlencoded"
-    )
 
-    p = {
-        'username': 'demo@bridgeft.com',
-        'password': 'demouser',
-        'grant_type': 'password'
-    }
-    auth_endpoint = 'https://api.bridgeft.com/v2/oauth2/token'
-    resp = client.request('POST', auth_endpoint, query_params=p)
-    data = json.loads(resp.data)
-    id_token = data['IdToken']
-    print(f'using id token as a Bearer token: {id_token}')
+    # uses the password grant type to get an id token
+    id_token = get_id_token()
+
 
     # use the id token as a bearer token to view api keys
     api = swagger_client.APIKeysApi(token_authed_client(id_token))
