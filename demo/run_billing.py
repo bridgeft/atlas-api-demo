@@ -161,7 +161,7 @@ def main():
     :return:
     """
 
-    ws = websocket.WebSocketApp(f'wss://4s7vk7rtwc.execute-api.us-east-1.amazonaws.com/prod/?queryauth={auth_token}',
+    ws = websocket.WebSocketApp(f'wss://websocket.bridgeft.com/?queryauth={auth_token}',
                                 on_open=on_open,
                                 on_message=on_message)
 
