@@ -84,10 +84,9 @@ def start_pdf_process():
     """
     # when the connection is opened, start your billing report job
     _ = pdf_api.filter_printable_report_start_pdf(body={
+        # note: these are hard-coded to the eng-demo@bridgeft.com account
         'account_ids': [
-            263328,
             263329,
-            263330,
             263331,
             263332
         ],
@@ -130,8 +129,8 @@ def download_reports(url):
     :param url: Link to the zipped printable reports
     :return:
     """
-    print("### Downloading Reports ### \n")
-    wget.download(url)
+    print("### Downloading Reports as a zip of PDF ### \n")
+    wget.download(url, out='out/pdf-reports.zip')
     print("### Download Completed ### \n")
 
 

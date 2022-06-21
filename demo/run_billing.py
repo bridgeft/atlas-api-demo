@@ -66,6 +66,7 @@ def start_billing_report():
 
     :return:
     """
+    # note: firm ID is hard-coded to demo@bridgeft.com
     _ = billing_api.start_billing_report_start_pdf(body={
         'firm_id': 39,
         'create_invoices': True,
