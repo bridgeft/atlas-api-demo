@@ -50,7 +50,7 @@ def holdings_to_csv(path='out/holdings.csv'):
 
     print(f"Writing {len(resp.data)} holdings to {path}")
     # Writing to a csv file
-    csv_file = open(path, 'w')
+    csv_file = open(path, 'w+')
     csv_writer = csv.writer(csv_file)
 
     count = 0

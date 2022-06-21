@@ -24,7 +24,7 @@ fields = [
 ]
 
 
-def accounts_to_csv(path='accounts.csv'):
+def accounts_to_csv(path='out/accounts.csv'):
     """
     Outputs select fields (above) to a CSV file
 
@@ -45,7 +45,7 @@ def accounts_to_csv(path='accounts.csv'):
             accounts.append(acct_row)
 
     # output the accounts to a csv
-    with open(path, 'w', newline='\n') as csvfile:
+    with open(path, 'w+', newline='\n') as csvfile:
         writer = csv.writer(csvfile, delimiter=',',
                                 quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(fields)
@@ -57,7 +57,7 @@ def accounts_to_csv(path='accounts.csv'):
 
 def filter_example():
     """
-    Filters and prints all Schwab accounts located in Hawaii
+    Filters and prints all Schwab accounts located in Alabama
     Illustrates simple filtering, using key-value pairs as exact matching
     See more: https://docs.bridgeft.com/docs/filtering-v26
 
@@ -66,7 +66,7 @@ def filter_example():
     # find all schwab accounts in Hawaii
     resp = api.filter_accounts(body={
         'custodian': 'SWB',
-        'state': 'Hawaii',
+        'state': 'Alabama',
     })
     accounts = resp.data
 
@@ -77,7 +77,7 @@ def filter_example():
 
 def complex_filter_example():
     """
-    Finds and filters all TDA and Schwab IRA accounts located in Hawaii
+    Finds and filters all TDA and Schwab IRA accounts located in Alabama
     Illustrates complex filtering, which allows applying a number of range operations and join conditions
     See more: https://docs.bridgeft.com/docs/filtering-v26
 
@@ -101,7 +101,7 @@ def complex_filter_example():
                 'op': 'contains',
             }]
         },
-        'state': 'Hawaii',
+        'state': 'Alabama',
     })
     accounts = resp.data
 
@@ -120,7 +120,7 @@ def get_single_account():
     :return:
     """
     print('Fetching single account')
-    acct = api.get_account(id=217057)
+    acct = api.get_account(id=263329)
     print(f'Details for account id {acct.id} ({acct.name}, {acct.number}):')
     values = []
     for f in fields:

@@ -15,8 +15,10 @@ def generate_aum_balance_to_csv():
     """
 
     # fetch all balances for all accounts
+    print('Fetching AUM')
     resp = api.get_account_balances()
     balances = resp.data
+    print(f'Obtained {len(balances)} AUM records')
 
     # balance_value_by_date, a dictionary set to keep a track of total balance by date
     balance_value_by_date = {}
@@ -29,21 +31,21 @@ def generate_aum_balance_to_csv():
         balance_value_by_date[date] += value
 
     # write the dictionary set to a csv
-    csv_path = 'aum.csv'
+    csv_path = 'out/aum.csv'
 
-    data_to_file = open(csv_path, 'w', newline='')  # need to close at the end
+    data_to_file = open(csv_path, 'w+', newline='\n')  # need to close at the end
     csv_writer = csv.writer(data_to_file, delimiter=",")
     csv_writer.writerow(["Date", "Balance"])
 
-    print('generating aum csv')
+    print('Writing AUM to CSV')
     for key, value in balance_value_by_date.items():
-        date = key,
+        date = key
         balance = round(value, 2)
 
         csv_writer.writerow([date, balance])
     data_to_file.close()
 
-    print('aum csv generation complete!!')
+    print('Done')
 
 
 def main():

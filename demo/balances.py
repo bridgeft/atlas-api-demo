@@ -62,7 +62,7 @@ def balances_by_account_to_csv():
         csv_path = f'out/account-balances/{accountId}.csv'
         print(f'Account ID: {accountId} \nBalance length: {len(balances)}. Writing to {csv_path}')
 
-        csv_file = open(csv_path, 'w', newline='\n')  # need to close at the end
+        csv_file = open(csv_path, 'w+', newline='\n')  # need to close at the end
         csv_writer = csv.writer(csv_file, delimiter=",", quotechar="\"", quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow(["Date", "Account ID", "Beginning Period Value", "Cash Value", "Security Holding Value",
                              "Net Return Percent"])
