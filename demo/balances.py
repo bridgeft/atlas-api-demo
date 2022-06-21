@@ -10,34 +10,18 @@ import json
 api = swagger_client.AccountBalancesApi(authed_client())
 
 
-def list_balances():
-    """
-    Demonstrates listing all account balances.
-
-    :return:
-    """
-    # get all balances
-    print("get balances")
-    resp = api.get_account_balances()
-
-    # first two balances from the response
-    print('first two balance response:')
-    print(resp.data[:2])
-
 
 def list_current_balances():
-
     """
     Demonstrate listing account current balances
 
     """
-
     # get all current balances
-    print("get current balances")
-    resp = api.get_account_current_balances()
+    print("Getting all current balances")
+    bals = api.get_account_current_balances()
 
-    print('first two current balance response:')
-    print(resp[:2])
+    print(f'Received {len(bals)} records. The first two are:')
+    print(bals[:2])
 
 
 def balances_by_account_to_csv():
@@ -47,9 +31,8 @@ def balances_by_account_to_csv():
     2. Copying time series balances for each account to csv files
 
     """
-
     # fetch all balances
-    print("fetch balances for all accounts")
+    print("Fetching balances by account")
 
     balances_by_account = {}
     has_next = True
@@ -68,30 +51,38 @@ def balances_by_account_to_csv():
 
             balances_by_account[account_id].append(balance)
 
-    print("write balance to csv")
+        # limit the pagination...
+        if page > 2:
+            break
 
+    print("Writing to csv...")
+
+    ctr = 0
     for accountId, balances in balances_by_account.items():
-        print(f'Account ID: {accountId} \nBalance length: {len(balances)}')
+        csv_path = f'out/account-balances/{accountId}.csv'
+        print(f'Account ID: {accountId} \nBalance length: {len(balances)}. Writing to {csv_path}')
 
-        csv_path = f'./balance_csv_files/{accountId}_balance.csv'
-        data_to_file = open(csv_path, 'w', newline='')  # need to close at the end
-        csv_writer = csv.writer(data_to_file, delimiter=",")
+        csv_file = open(csv_path, 'w', newline='\n')  # need to close at the end
+        csv_writer = csv.writer(csv_file, delimiter=",", quotechar="\"", quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow(["Date", "Account ID", "Beginning Period Value", "Cash Value", "Security Holding Value",
                              "Net Return Percent"])
 
         for balance in balances:
-            date = balance["as_of_date"],
-            account_id = balance["account_id"],
-            beginning_value = balance["beginning_period_value"],
-            cash_value = balance["cash_value"],
-            sec_holding_value = balance["security_holdings_value"],
+            date = balance["as_of_date"]
+            account_id = balance["account_id"]
+            beginning_value = balance["beginning_period_value"]
+            cash_value = balance["cash_value"]
+            sec_holding_value = balance["security_holdings_value"]
             return_percent = balance["percentage_period_net_return"]
 
             csv_writer.writerow([date, account_id, beginning_value, cash_value, sec_holding_value, return_percent])
-        data_to_file.close()
-        break
+        csv_file.close()
 
-    print("copying balances to csv complete!!")
+        # limit to 3 accounts
+        if ctr > 3:
+            break
+        ctr += 1
+
 
 
 def main():
@@ -100,8 +91,6 @@ def main():
 
     :return:
     """
-    list_balances()
-
     list_current_balances()
 
     balances_by_account_to_csv()
