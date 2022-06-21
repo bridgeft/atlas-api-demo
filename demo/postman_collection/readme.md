@@ -4,7 +4,7 @@ URL to swagger docs: https://docs.bridgeft.com/openapi/623a0b06cc9604045f56053a
 
 Steps:
 
-1. In the picture below, click `import` located on the top left section.
+1. Open Postman (picture below) and click `import` located on the top left section.
 
 ![Postman Page](Postman_page.png)
 
