@@ -149,7 +149,7 @@ def download(url):
     # download
     print("### Downloading Invoices ###\n")
 
-    wget.download(url)
+    wget.download(url, out='out/billing-invoices.zip')
 
     print("\n### Invoices downloaded ###\n")
 
