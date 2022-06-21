@@ -45,12 +45,10 @@ def holdings_to_csv(path='out/holdings.csv'):
         'as_of_date': latest_date,
     }
 
-    print("fetch account holdings for as_of_date = yesterday")
+    print("Fetching account holdings")
     resp = api.filter_account_holdings(body=filter_body)
 
-    print(f'Obtained {len(resp.data)} holdings')
-
-    print("start writing holdings to a csv file")
+    print(f"Writing {len(resp.data)} holdings to {path}")
     # Writing to a csv file
     csv_file = open(path, 'w')
     csv_writer = csv.writer(csv_file)
@@ -65,7 +63,7 @@ def holdings_to_csv(path='out/holdings.csv'):
 
     csv_file.close()
 
-    print("csv file generation complete!!")
+    print("Done")
 
 def main():
     """
