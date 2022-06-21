@@ -32,14 +32,14 @@ def list_latest_holdings():
     print(resp.data[:2])
 
 
-def holdings_to_csv(path='holdings.csv'):
+def holdings_to_csv(path='out/holdings.csv'):
     """
     Outputs all the holdings fields to a CSV file
 
     :param path:
     :return:
     """
-    latest_date = (datetime.datetime.now() - timedelta(1)).date()
+    latest_date = (datetime.datetime.now() - timedelta(4)).date()
 
     filter_body = {
         'as_of_date': latest_date,
@@ -48,10 +48,12 @@ def holdings_to_csv(path='holdings.csv'):
     print("fetch account holdings for as_of_date = yesterday")
     resp = api.filter_account_holdings(body=filter_body)
 
+    print(f'Obtained {len(resp.data)} holdings')
+
     print("start writing holdings to a csv file")
     # Writing to a csv file
-    data_file = open(path, 'w')
-    csv_writer = csv.writer(data_file)
+    csv_file = open(path, 'w')
+    csv_writer = csv.writer(csv_file)
 
     count = 0
     for holding in resp.data:
@@ -61,7 +63,7 @@ def holdings_to_csv(path='holdings.csv'):
             count += 1
         csv_writer.writerow(holding.values())
 
-    data_file.close()
+    csv_file.close()
 
     print("csv file generation complete!!")
 
