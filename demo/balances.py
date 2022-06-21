@@ -60,7 +60,7 @@ def balances_by_account_to_csv():
     ctr = 0
     for accountId, balances in balances_by_account.items():
         csv_path = f'out/account-balances/{accountId}.csv'
-        print(f'Account ID: {accountId} \nBalance length: {len(balances)}. Writing to {csv_path}')
+        print(f'Account ID: {accountId} \nBalances time series length: {len(balances)}. Writing to {csv_path}')
 
         csv_file = open(csv_path, 'w+', newline='\n')  # need to close at the end
         csv_writer = csv.writer(csv_file, delimiter=",", quotechar="\"", quoting=csv.QUOTE_MINIMAL)
