@@ -39,7 +39,8 @@ def holdings_to_csv(path='out/holdings.csv'):
     :param path:
     :return:
     """
-    latest_date = (datetime.datetime.now() - timedelta(4)).date()
+    # get holdings from yesterday
+    latest_date = (datetime.datetime.now() - timedelta(1)).date()
 
     filter_body = {
         'as_of_date': latest_date,
