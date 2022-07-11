@@ -130,7 +130,7 @@ def download_reports(url):
     :return:
     """
     print("### Downloading Reports as a zip of PDF ### \n")
-    wget.download(url, out='out/pdf-reports.zip')
+    wget.download(url, out='../out/pdf-reports.zip')
     print("### Download Completed ### \n")
 
 
